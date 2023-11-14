@@ -9,7 +9,9 @@
       return shortcuts.map((shortcut) => ({
         ...shortcut,
         category,
-        fuzzysortPrepared: fuzzysort.prepare(shortcut.description),
+        fuzzysortPrepared: fuzzysort.prepare(
+          `${shortcut.description} ${category}`,
+        ),
       }));
     },
   );
