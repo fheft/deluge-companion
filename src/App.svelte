@@ -1,29 +1,35 @@
 <script lang="ts">
   import { v4_1_0 } from "./data/v4.1.0";
-  import type { ShortcutCategory } from "./types/shortcut";
+  import type {
+    FilteredShortcutCategory,
+    ShortcutCategory,
+  } from "./types/shortcut";
+  import fuzzysort from "fuzzysort";
+
+  const preparedCategories: ShortcutCategory[] = Object.entries(v4_1_0).map(
+    ([name, shortcuts]) => ({
+      name,
+      shortcuts: shortcuts.map((shortcut) => ({
+        ...shortcut,
+        fuzzysortPrepared: fuzzysort.prepare(shortcut.description),
+      })),
+    }),
+  );
 
   let input = "";
-
-  let filteredCategories: ShortcutCategory[];
+  let filteredCategories: FilteredShortcutCategory[];
 
   $: {
-    const allCategories = Object.entries(v4_1_0);
-    if (!input) {
-      filteredCategories = allCategories.map(([name, shortcuts]) => ({
-        name,
-        shortcuts,
-      }));
-    } else {
-      filteredCategories = allCategories
-        .map(([category, entries]) => {
-          const filteredEntries = entries.filter((e) => {
-            return e.description.includes(input);
-          });
+    filteredCategories = preparedCategories
+      .map((category) => {
+        const filteredEntries = fuzzysort.go(input, category.shortcuts, {
+          key: "fuzzysortPrepared",
+          threshold: -1000,
+        });
 
-          return { name: category, shortcuts: filteredEntries };
-        })
-        .filter((e) => e.shortcuts.length > 0);
-    }
+        return { name: category.name, shortcuts: filteredEntries };
+      })
+      .filter((e) => e.shortcuts.length > 0);
   }
 </script>
 
@@ -33,8 +39,8 @@
   {#each filteredCategories as category}
     <h2>{category.name}</h2>
     {#each category.shortcuts as shortcut}
-      <h3>{shortcut.description}</h3>
-      <p>{shortcut.command}</p>
+      <h3>{shortcut.obj.description}</h3>
+      <p>{shortcut.obj.command}</p>
     {/each}
   {/each}
 </main>
