@@ -33,13 +33,18 @@
   }
 </script>
 
-<main>
-  <input type="search" placeholder="Search..." bind:value={input} />
+<main class="mx-auto max-w-[70ch] px-4 py-8 bg-white">
+  <input
+    type="search"
+    placeholder="Search..."
+    class="px-4 py-2 rounded-md border block w-full"
+    bind:value={input}
+  />
 
   {#each filteredCategories as category}
-    <h2>{category.name}</h2>
+    <h2 class="text-xl font-bold mt-8 mb-4">{category.name}</h2>
     {#each category.shortcuts as shortcut}
-      <h3>{shortcut.obj.description}</h3>
+      <h3 class="text-lg font-bold mt-4 mb-2">{shortcut.obj.description}</h3>
       <p>{shortcut.obj.command}</p>
     {/each}
   {/each}
