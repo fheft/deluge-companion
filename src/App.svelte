@@ -1,41 +1,32 @@
 <script lang="ts">
   import { v4_1_0 } from "./data/v4.1.0";
-  import type {
-    FilteredShortcutCategory,
-    ShortcutCategory,
-  } from "./types/shortcut";
+  import type { Shortcut } from "./types/shortcut";
   import fuzzysort from "fuzzysort";
   import { onMount } from "svelte";
 
-  const preparedCategories: ShortcutCategory[] = Object.entries(v4_1_0).map(
-    ([name, shortcuts]) => ({
-      name,
-      shortcuts: shortcuts.map((shortcut) => ({
+  const preparedShortcuts: Shortcut[] = Object.entries(v4_1_0).flatMap(
+    ([category, shortcuts]) => {
+      return shortcuts.map((shortcut) => ({
         ...shortcut,
+        category,
         fuzzysortPrepared: fuzzysort.prepare(shortcut.description),
-      })),
-    }),
+      }));
+    },
   );
 
   let input = "";
   let inputEl: HTMLInputElement;
-  let filteredCategories: FilteredShortcutCategory[];
+  let filteredShortcuts: Fuzzysort.KeyResults<Shortcut>;
 
   onMount(() => {
     inputEl.focus();
   });
 
   $: {
-    filteredCategories = preparedCategories
-      .map((category) => {
-        const filteredEntries = fuzzysort.go(input, category.shortcuts, {
-          key: "fuzzysortPrepared",
-          threshold: -1000,
-        });
-
-        return { name: category.name, shortcuts: filteredEntries };
-      })
-      .filter((e) => e.shortcuts.length > 0);
+    filteredShortcuts = fuzzysort.go(input, preparedShortcuts, {
+      key: "fuzzysortPrepared",
+      threshold: -1000,
+    });
   }
 </script>
 
@@ -48,12 +39,14 @@
     bind:this={inputEl}
   />
 
-  {#each filteredCategories as category}
-    <h2 class="text-xl font-bold mt-8 mb-4">{category.name}</h2>
-    {#each category.shortcuts as shortcut}
-      <h3 class="text-lg font-bold mt-4 mb-2">{shortcut.obj.description}</h3>
-      <p>{shortcut.obj.command}</p>
-    {/each}
+  {#each filteredShortcuts as shortcut}
+    <h3 class="text-lg font-bold mt-8 mb-2">
+      <span>{shortcut.obj.description}</span>
+      <span class="bg-sky-200 rounded-full px-2 text-sm whitespace-nowrap">
+        {shortcut.obj.category}
+      </span>
+    </h3>
+    <p>{shortcut.obj.command}</p>
   {/each}
 </main>
 
