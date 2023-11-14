@@ -5,6 +5,7 @@
     ShortcutCategory,
   } from "./types/shortcut";
   import fuzzysort from "fuzzysort";
+  import { onMount } from "svelte";
 
   const preparedCategories: ShortcutCategory[] = Object.entries(v4_1_0).map(
     ([name, shortcuts]) => ({
@@ -17,7 +18,12 @@
   );
 
   let input = "";
+  let inputEl: HTMLInputElement;
   let filteredCategories: FilteredShortcutCategory[];
+
+  onMount(() => {
+    inputEl.focus();
+  });
 
   $: {
     filteredCategories = preparedCategories
@@ -39,6 +45,7 @@
     placeholder="Search..."
     class="px-4 py-2 rounded-md border block w-full"
     bind:value={input}
+    bind:this={inputEl}
   />
 
   {#each filteredCategories as category}
