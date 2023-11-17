@@ -1,0 +1,19 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  export let input = "";
+
+  let inputEl: HTMLInputElement;
+
+  onMount(() => {
+    inputEl.focus();
+  });
+</script>
+
+<input
+  type="search"
+  placeholder="Search..."
+  class="px-6 py-3 rounded-full block w-full bg-neutral-800 focus:bg-neutral-700 text-neutral-200 outline-neutral-300 focus:outline-2 outline-1 outline"
+  bind:value={input}
+  bind:this={inputEl}
+/>

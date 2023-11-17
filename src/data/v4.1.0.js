@@ -1,5 +1,5 @@
 export const v4_1_0 = {
-  "Global": [
+  Global: [
     {
       description: "View zoom level",
       command: "press(X)",
@@ -77,7 +77,7 @@ export const v4_1_0 = {
       command: "hold(CLIP) turn(SELECT)",
     },
   ],
-  "Sequencing": [
+  Sequencing: [
     {
       description: "Make long note",
       command: "hold(GRID) press(GRID_UNLIT)",
@@ -91,7 +91,8 @@ export const v4_1_0 = {
       command: "hold(GRID) turn(X)",
     },
     {
-      description: "Note probability; clockwise is iteration and counter is probability",
+      description:
+        "Note probability; clockwise is iteration and counter is probability",
       command: "hold(GRID) turn(SELECT)",
     },
     {
@@ -272,7 +273,8 @@ export const v4_1_0 = {
     },
     {
       description: "Load sample into a kit row silently",
-      command: "hold(SHIFT) hold(AUDITION) press(LOAD) turn(SELECT) press(SELECT)",
+      command:
+        "hold(SHIFT) hold(AUDITION) press(LOAD) turn(SELECT) press(SELECT)",
     },
     {
       description: "Synth resample",
@@ -280,11 +282,13 @@ export const v4_1_0 = {
     },
     {
       description: "Load all samples from folder to kit",
-      command: "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(ALL) press(SELECT)",
+      command:
+        "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(ALL) press(SELECT)",
     },
     {
       description: "Slice sample",
-      command: "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(SLICE) press(SELECT) menu(SLICES) press(SELECT)",
+      command:
+        "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(SLICE) press(SELECT) menu(SLICES) press(SELECT)",
     },
     {
       description: "Rename kit row or instrument",
@@ -356,7 +360,8 @@ export const v4_1_0 = {
     },
     {
       description: "Setting up choke group",
-      command: "hold(AUDITION) press(7,8) turn(SELECT) menu(CHOKE) press(SELECT)",
+      command:
+        "hold(AUDITION) press(7,8) turn(SELECT) menu(CHOKE) press(SELECT)",
     },
     {
       description: "Cycle default scales",
@@ -401,32 +406,39 @@ export const v4_1_0 = {
   ],
   "Waveforms, record-to-arranger, multi-sampling": [
     {
-      description: "Chromatic sample - sample sample, different pitches (on new synth)",
-      command: "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) press(SELECT)",
+      description:
+        "Chromatic sample - sample sample, different pitches (on new synth)",
+      command:
+        "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) press(SELECT)",
     },
     {
       description: "Basic sample - load sample with no pitch detection",
-      command: "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(BASIC) press(SELECT)",
+      command:
+        "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(BASIC) press(SELECT)",
     },
     {
       description: "Multi-sampling",
-      command: "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(MULTI) press(SELECT)",
+      command:
+        "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(MULTI) press(SELECT)",
     },
     {
       description: "Single cycle waveforms",
-      command: "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(SINGLE) press(SELECT)",
+      command:
+        "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(SINGLE) press(SELECT)",
     },
     {
       description: "External sound source",
       command: "hold(SHIFT) press(6,3) turn(SELECT) menu(IN) press(PLAY)",
     },
     {
-      description: "Record to arranger - live record parameter changes and MIDI notes (RECORD to end)",
+      description:
+        "Record to arranger - live record parameter changes and MIDI notes (RECORD to end)",
       command: "press(SONG) hold(RECORD) press(SONG)",
     },
     {
-      description: "Append recording to existing arrangement (from arrangement mode; RECORD to end)",
-      command: "move(X) press(SONG) hold(RECORD) press(SONG)",
+      description:
+        "Append recording to existing arrangement (from arrangement mode; RECORD to end)",
+      command: "turn(X) press(SONG) hold(RECORD) press(SONG)",
     },
     {
       description: "Waveform edit view - change start / end / loop",
@@ -475,7 +487,8 @@ export const v4_1_0 = {
       command: "hold(GRID) turn(SELECT)",
     },
     {
-      description: "Delete clip instance from arranger (left-most clip grid button)",
+      description:
+        "Delete clip instance from arranger (left-most clip grid button)",
       command: "press(GRID_LIT)",
     },
     {
@@ -519,7 +532,8 @@ export const v4_1_0 = {
       command: "hold(X) press(PLAY)",
     },
     {
-      description: "Make clip instance unique (white; left-most clip grid button)",
+      description:
+        "Make clip instance unique (white; left-most clip grid button)",
       command: "hold(SHIFT) press(GRID_LIT)",
     },
     {
@@ -527,7 +541,8 @@ export const v4_1_0 = {
       command: "hold(GRID_LIT) turn(PARAMETER)",
     },
     {
-      description: "Copy clip from arranger to song mode, eg to save white instance as its own clip",
+      description:
+        "Copy clip from arranger to song mode, eg to save white instance as its own clip",
       command: "hold(GRID_LIT) press(SONG) turn(Y)",
     },
     {
@@ -535,7 +550,8 @@ export const v4_1_0 = {
       command: "hold(GRID_LIT) press(SONG) turn(X)",
     },
     {
-      description: "Insert / delete time; applies to currently visible screen (clockwise: insert; counter: delete)",
+      description:
+        "Insert / delete time; applies to currently visible screen (clockwise: insert; counter: delete)",
       command: "hold(SHIFT) turn(X)",
     },
     {
@@ -589,11 +605,13 @@ export const v4_1_0 = {
   ],
   "Parameter dials": [
     {
-      description: "Assign gold dial control of parameters - first select parameter",
+      description:
+        "Assign gold dial control of parameters - first select parameter",
       command: "hold(LEARN) turn(PARAMETER)",
     },
     {
-      description: "Check gold dial control of parameters - first select parameter",
+      description:
+        "Check gold dial control of parameters - first select parameter",
       command: "turn(PARAMETER)",
     },
     {
@@ -679,15 +697,18 @@ export const v4_1_0 = {
       command: "hold(SHIFT) hold(LEARN) press(AUDITION)",
     },
     {
-      description: "Unlearn external controller to trigger clip (from song mode)",
+      description:
+        "Unlearn external controller to trigger clip (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(AUDITION)",
     },
     {
-      description: "Unlearn external controller to trigger play (from song mode)",
+      description:
+        "Unlearn external controller to trigger play (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(PLAY)",
     },
     {
-      description: "Unlearn external controller to trigger record (from song mode)",
+      description:
+        "Unlearn external controller to trigger record (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(RECORD)",
     },
     {
@@ -695,7 +716,8 @@ export const v4_1_0 = {
       command: "hold(LEARN) press(EXTERNAL)",
     },
     {
-      description: "Unlearn external control of parameter - first select parameter",
+      description:
+        "Unlearn external control of parameter - first select parameter",
       command: "hold(SHIFT) hold(LEARN)",
     },
     {
@@ -711,7 +733,8 @@ export const v4_1_0 = {
       command: "press(SYNC)",
     },
     {
-      description: "Mute by external MIDI for individual kit rows - in kit mode",
+      description:
+        "Mute by external MIDI for individual kit rows - in kit mode",
       command: "hold(LEARN) hold(LAUNCH) press(EXTERNAL)",
     },
   ],
@@ -737,15 +760,18 @@ export const v4_1_0 = {
       command: "press(RECORD) press(PLAY) press(LAUNCH)",
     },
     {
-      description: "Record overdub - press grid directly underneath existing audio clip",
+      description:
+        "Record overdub - press grid directly underneath existing audio clip",
       command: "press(RECORD) press(PLAY) hold(RECORD) press(GRID)",
     },
     {
-      description: "Record overdub - with continuous layering - press grid directly underneath existing audio clip",
+      description:
+        "Record overdub - with continuous layering - press grid directly underneath existing audio clip",
       command: "press(RECORD) press(PLAY) hold(RECORD) press(AUDITION)",
     },
     {
-      description: "Tempo detection for loop pedal recording - start with a blank song",
+      description:
+        "Tempo detection for loop pedal recording - start with a blank song",
       command: "hold(SHIFT) press(TAP)",
     },
     {
@@ -758,7 +784,7 @@ export const v4_1_0 = {
     },
     {
       description: "Enable count-in before audio recording",
-      command: "hold(SHIFT) press(SELECT) menu(RECORDING) menu(COUNT IN)",
+      command: "hold(SHIFT) press(SELECT) menu(RECORDING) menu(COUNT_IN)",
     },
-  ]
-}
+  ],
+};
