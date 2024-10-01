@@ -127,8 +127,14 @@ export const targetDescriptions: CommandTargetDescriptions = {
     title: "Scale",
     type: CommandTargetType.circleButton,
   },
-  [CommandTarget.X]: { title: "◀ ▶", type: CommandTargetType.blackKnob },
-  [CommandTarget.Y]: { title: "▼▲", type: CommandTargetType.blackKnob },
+  [CommandTarget.X]: {
+    title: "◀&#xFE0E; ▶&#xFE0E;",
+    type: CommandTargetType.blackKnob,
+  },
+  [CommandTarget.Y]: {
+    title: "▼&#xFE0E;▲&#xFE0E;",
+    type: CommandTargetType.blackKnob,
+  },
   [CommandTarget.SELECT]: {
     title: "Select",
     type: CommandTargetType.blackKnob,

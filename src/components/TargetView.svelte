@@ -19,7 +19,7 @@
   <span class="target-icon text-[#f00] font-bold">INVALID</span>
 {:else if description.type === CommandTargetType.circleButton}
   <span class="target-icon text-deluge-white"><CircleButton /></span>
-  <span class="target-title uppercase">{description.title}</span>
+  <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === CommandTargetType.grid}
   <span
     class={"target-icon " +
@@ -29,7 +29,7 @@
   >
     <FullGrid />
   </span>
-  <span class="target-title">{command.text || description.title}</span>
+  <span class="target-title">{@html command.text || description.title}</span>
 {:else if description.type === CommandTargetType.gridCol}
   <span
     class={"target-icon " +
@@ -37,22 +37,23 @@
   >
     <GridCol />
   </span>
-  <span class="target-title">{description.title}</span>
+  <span class="target-title">{@html description.title}</span>
 {:else if description.type === CommandTargetType.blackKnob}
   <span class="target-icon text-neutral-900"><Knob /></span>
-  <span class="target-title uppercase">{description.title}</span>
+  <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === CommandTargetType.goldKnob}
   <span class="target-icon text-deluge-gold"><Knob /></span>
-  <span class="target-title uppercasee">{description.title}</span>
+  <span class="target-title uppercasee">{@html description.title}</span>
 {:else if description.type === CommandTargetType.display}
   <span class="target-icon">&nbsp;</span>
   <span class=" target-title bg-neutral-900 text-white px-2 font-mono"
     >{command.text}</span
   >
-  <span class="target-title font-mono uppercase">{description.title}</span>
+  <span class="target-title font-mono uppercase">{@html description.title}</span
+  >
 {:else if description.type === CommandTargetType.external}
   <span class="target-icon text-neutral-700"><Midi /></span>
-  <span class="target-title italic">{description.title}</span>
+  <span class="target-title italic">{@html description.title}</span>
 {/if}
 
 <style type="postcss">
