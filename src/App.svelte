@@ -42,9 +42,7 @@
           }
           return { action, target };
         }),
-        fuzzysortPrepared: fuzzysort.prepare(
-          `${shortcut.description} ${category}`,
-        ),
+        fuzzysortPrepared: fuzzysort.prepare(`${shortcut.title} ${category}`),
       }));
     },
   );

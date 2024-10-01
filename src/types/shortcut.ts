@@ -4,9 +4,10 @@ import type { CommandTarget } from "../data/targets";
 import { CommandTargetType } from "../data/targets";
 
 export type Shortcut = {
-  description: string;
+  title: string;
   command: string;
   category: string;
+  description: string;
   commands: Command[];
   fuzzysortPrepared: Fuzzysort.Prepared;
 };

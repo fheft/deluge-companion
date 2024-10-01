@@ -13,8 +13,11 @@
     {shortcut.category}
   </span>
   <h3 class="text-lg font-bold mb-2 mt-1">
-    {shortcut.description}
+    {shortcut.title}
   </h3>
+  {#if shortcut.description}
+    <p class="pb-2">{shortcut.description}</p>
+  {/if}
   <p class="flex gap-x-2 gap-y-4 flex-wrap" title={shortcut.command}>
     {#each shortcut.commands as command}
       <div

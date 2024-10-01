@@ -1,789 +1,788 @@
 export const v4_1_0 = {
   Global: [
     {
-      description: "View zoom level",
+      title: "View zoom level",
       command: "press(X)",
     },
     {
-      description: "Change zoom level",
+      title: "Change zoom level",
       command: "hold(X) turn(X)",
     },
     {
-      description: "Scroll horizontal",
+      title: "Scroll horizontal",
       command: "turn(X)",
     },
     {
-      description: "Scroll vertical",
+      title: "Scroll vertical",
       command: "turn(Y)",
     },
     {
-      description: "Undo",
+      title: "Undo",
       command: "press(BACK)",
     },
     {
-      description: "Redo",
+      title: "Redo",
       command: "hold(SHIFT) press(BACK)",
     },
     {
-      description: "New song",
+      title: "New song",
       command: "hold(SHIFT) press(LOAD)",
     },
     {
-      description: "Delete song",
+      title: "Delete song",
       command: "press(LOAD) turn(SELECT) hold(SHIFT) press(SAVE)",
     },
     {
-      description: "Load song",
+      title: "Load song",
       command: "press(LOAD) turn(SELECT) press(LOAD)",
     },
     {
-      description: "Save song",
+      title: "Save song",
       command: "press(SAVE) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Change tempo (course)",
+      title: "Change tempo (course)",
       command: "turn(TEMPO)",
     },
     {
-      description: "Change tempo (fine)",
+      title: "Change tempo (fine)",
       command: "hold(TEMPO) turn(TEMPO)",
     },
     {
-      description: "Metronome",
+      title: "Metronome",
       command: "hold(SHIFT) press(TAP)",
     },
     {
-      description: "Swing",
+      title: "Swing",
       command: "hold(SHIFT) turn(TEMPO)",
     },
     {
-      description: "File system up",
+      title: "File system up",
       command: "press(BACK)",
     },
     {
-      description: "Adjust brightness",
+      title: "Adjust brightness",
       command: "hold(SHIFT) hold(LEARN) turn(Y)",
     },
     {
-      description: "Settings menu",
+      title: "Settings menu",
       command: "hold(SHIFT) press(SELECT)",
     },
     {
-      description: "Save song, collect all samples",
+      title: "Save song, collect all samples",
       command: "press(SAVE) turn(SELECT) hold(SELECT) press(SELECT)",
     },
     {
-      description: "Pad refresh rate",
+      title: "Pad refresh rate",
       command: "hold(CLIP) turn(SELECT)",
     },
   ],
   Sequencing: [
     {
-      description: "Make long note",
+      title: "Make long note",
       command: "hold(GRID) press(GRID_UNLIT)",
     },
     {
-      description: "Make long note across the next screen",
+      title: "Make long note across the next screen",
       command: "press(GRID) turn(X) hold(X) press(GRID_UNLIT)",
     },
     {
-      description: "Adjust note velocity",
+      title: "Adjust note velocity",
       command: "hold(GRID) turn(X)",
     },
     {
-      description:
-        "Note probability; clockwise is iteration and counter is probability",
+      title: "Note probability",
       command: "hold(GRID) turn(SELECT)",
+      description: "Clockwise is iteration and counter is probability",
     },
     {
-      description: "Copy notes",
+      title: "Copy notes",
       command: "hold(LEARN) press(X)",
     },
     {
-      description: "Paste notes",
+      title: "Paste notes",
       command: "hold(SHIFT) hold(LEARN) press(X)",
     },
     {
-      description: "Cross screen editing, real time note cloning",
+      title: "Cross screen editing, real time note cloning",
       command: "press(CROSS)",
     },
     {
-      description: "Add instrument / row to kit",
+      title: "Add instrument / row to kit",
       command: "hold(AUDITION) press(KIT) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Note zoom level - 128th and 256th level",
+      title: "Note zoom level - 128th and 256th level",
       command: "hold(LEARN) turn(TEMPO)",
     },
     {
-      description: "Record live - notes into sequencer",
+      title: "Record live - notes into sequencer",
       command: "press(PLAY) press(RECORD)",
     },
     {
-      description: "Duplicate clip content - double and append",
+      title: "Duplicate clip content - double and append",
       command: "hold(SHIFT) press(X)",
     },
     {
-      description: "Change clip length",
+      title: "Change clip length",
       command: "hold(SHIFT) turn(X)",
     },
     {
-      description: "Shift all notes horizontally",
+      title: "Shift all notes horizontally",
       command: "hold(Y) turn(X)",
     },
     {
-      description: "Clear clip",
+      title: "Clear clip",
       command: "hold(X) press(BACK)",
     },
     {
-      description: "Change clip color",
+      title: "Change clip color",
       command: "hold(SHIFT) turn(Y)",
     },
     {
-      description: "Change row color - instrument row in kit",
+      title: "Change row color - instrument row in kit",
       command: "hold(SHIFT) hold(AUDITION) turn(Y)",
     },
     {
-      description: "Reorder kit clip row up or down",
+      title: "Reorder kit clip row up or down",
       command: "hold(AUDITION) hold(LAUNCH) turn(Y)",
     },
     {
-      description: "Note nudge individual note",
+      title: "Note nudge individual note",
       command: "hold(GRID_LIT) hold(X) turn(X)",
     },
     {
-      description: "Clip play direction",
+      title: "Clip play direction",
       command: "hold(SHIFT) press(1,5)",
     },
     {
-      description: "Euclidian seq events - number of events / notes",
+      title: "Euclidian seq events - number of events / notes",
       command: "hold(AUDITION) hold(Y) turn(Y)",
     },
     {
-      description: "Euclidian seq length - row length",
+      title: "Euclidian seq length - row length",
       command: "hold(AUDITION) turn(X)",
     },
     {
-      description: "Euclidian seq rotate - shift / rotate events or notes",
+      title: "Euclidian seq rotate - shift / rotate events or notes",
       command: "hold(AUDITION) press(X) turn(X)",
     },
   ],
   "Song view": [
     {
-      description: "Launch clip - queue",
+      title: "Launch clip - queue",
       command: "press(LAUNCH)",
     },
     {
-      description: "Launch clip - immediately",
+      title: "Launch clip - immediately",
       command: "hold(SHIFT) press(LAUNCH)",
     },
     {
-      description: "Fast scroll song list",
+      title: "Fast scroll song list",
       command: "press(LOAD) hold(SHIFT) turn(SELECT)",
     },
     {
-      description: "Create clip (empty row)",
+      title: "Create clip (empty row)",
       command: "press(GRID_UNLIT)",
     },
     {
-      description: "Enter clip (non-empty row)",
+      title: "Enter clip (non-empty row)",
       command: "press(GRID)",
     },
     {
-      description: "Move row clip up or down",
+      title: "Move row clip up or down",
       command: "hold(GRID) turn(Y)",
     },
     {
-      description: "Clip section color - change or create new",
+      title: "Clip section color - change or create new",
       command: "hold(SHIFT) press(AUDITION)",
     },
     {
-      description: "Launch section",
+      title: "Launch section",
       command: "press(AUDITION)",
     },
     {
-      description: "Section repeat (hold audition for 1 sec)",
+      title: "Section repeat",
+      description: "hold audition for 1 sec",
       command: "hold(AUDITION) turn(SELECT)",
     },
     {
-      description: "Clone clip (hold source, press destination)",
+      title: "Clone clip",
+      description: "hold source, press destination",
       command: "hold(GRID) press(GRID)",
     },
     {
-      description: "Delete clip",
+      title: "Delete clip",
       command: "hold(GRID) press(SAVE)",
     },
     {
-      description: "Solo clip - queue",
+      title: "Solo clip - queue",
       command: "hold(X) press(LAUNCH)",
     },
     {
-      description: "Solo clip - immediately",
+      title: "Solo clip - immediately",
       command: "hold(SHIFT) hold(X) press(LAUNCH)",
     },
     {
-      description: "Clip parameter change (per clip)",
+      title: "Clip parameter change (per clip)",
       command: "hold(GRID) turn(PARAMETER)",
     },
     {
-      description: "Clip parameter change (per song)",
+      title: "Clip parameter change (per song)",
       command: "press(ENTIRE) turn(PARAMETER)",
     },
     {
-      description: "Change existing clip preset",
+      title: "Change existing clip preset",
       command: "hold(GRID) turn(SELECT)",
     },
     {
-      description: "Change existing clip to synth",
+      title: "Change existing clip to synth",
       command: "hold(GRID) press(SYNTH)",
     },
     {
-      description: "Change existing clip to MIDI",
+      title: "Change existing clip to MIDI",
       command: "hold(GRID) press(MIDI)",
     },
     {
-      description: "Change existing clip to CV",
+      title: "Change existing clip to CV",
       command: "hold(GRID) press(CV)",
     },
     {
-      description: "Create audio track (in empty clip)",
+      title: "Create audio track (in empty clip)",
       command: "hold(GRID) press(SELECT)",
     },
     {
-      description: "Check name and type of non-empty clip",
+      title: "Check name and type of non-empty clip",
       command: "hold(GRID)",
     },
   ],
   "Recording / Resampling - Samples in Kit": [
     {
-      description: "Resample / record all audio output",
+      title: "Resample / record all audio output",
       command: "hold(SHIFT) press(RECORD)",
     },
     {
-      description: "Loop resample",
+      title: "Loop resample",
       command: "hold(RECORD) press(PLAY) hold(RECORD) press(PLAY)",
     },
     {
-      description: "Record sample into a kit",
+      title: "Record sample into a kit",
       command: "hold(SHIFT) press(KIT) press(RECORD)",
     },
     {
-      description: "Load sample into a kit row",
+      title: "Load sample into a kit row",
       command: "hold(AUDITION) press(LOAD) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Load sample into a kit row silently",
+      title: "Load sample into a kit row silently",
       command:
         "hold(SHIFT) hold(AUDITION) press(LOAD) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Synth resample",
+      title: "Synth resample",
       command: "hold(RECORD) press(AUDITION) hold(RECORD) press(GRID)",
     },
     {
-      description: "Load all samples from folder to kit",
+      title: "Load all samples from folder to kit",
       command:
         "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(ALL) press(SELECT)",
     },
     {
-      description: "Slice sample",
+      title: "Slice sample",
       command:
         "hold(SHIFT) press(KIT) turn(SELECT) hold(SELECT) menu(SLICE) press(SELECT) menu(SLICES) press(SELECT)",
     },
     {
-      description: "Rename kit row or instrument",
+      title: "Rename kit row or instrument",
       command: "hold(AUDITION) press(3,12)",
     },
   ],
   "Audio clips": [
     {
-      description: "Create new audio clip in song view (press empty row)",
+      title: "Create new audio clip in song view",
+      description: "press empty row",
       command: "hold(GRID_UNLIT) press(SELECT)",
     },
     {
-      description: "Source for audio clip in song view",
+      title: "Source for audio clip in song view",
       command: "hold(LEARN) press(GRID) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Create new audio track in arranger view",
+      title: "Create new audio track in arranger view",
       command: "hold(AUDITION) press(SELECT)",
     },
     {
-      description: "Source for audio clip in arranger view",
+      title: "Source for audio clip in arranger view",
       command: "hold(LEARN) press(AUDITION) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Clear audio clip recording",
+      title: "Clear audio clip recording",
       command: "hold(X) press(BACK)",
     },
     {
-      description: "Change color of audio wave",
+      title: "Change color of audio wave",
       command: "hold(SHIFT) turn(Y)",
     },
     {
-      description: "End point / loop length (use red end point marker)",
+      title: "End point / loop length",
+      description: "use red end point marker",
       command: "press(GRID) press(GRID)",
     },
     {
-      description: "Waveform start / end point",
+      title: "Waveform start / end point",
       command: "hold(SHIFT) press(1,1)",
     },
     {
-      description: "Adjust length - audio clip waveform",
+      title: "Adjust length - audio clip waveform",
       command: "hold(SHIFT) turn(X)",
     },
   ],
   "Modifying sounds": [
     {
-      description: "New synth",
+      title: "New synth",
       command: "hold(SHIFT) press(SYNTH)",
     },
     {
-      description: "New kit",
+      title: "New kit",
       command: "hold(SHIFT) press(KIT)",
     },
     {
-      description: "Save synth preset",
+      title: "Save synth preset",
       command: "hold(SAVE) press(SYNTH) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Save kit preset",
+      title: "Save kit preset",
       command: "hold(SAVE) press(KIT) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Note keyboard view",
+      title: "Note keyboard view",
       command: "press(KEY)",
     },
     {
-      description: "Clear notes and automation",
+      title: "Clear notes and automation",
       command: "hold(X) press(BACK)",
     },
     {
-      description: "Setting up choke group",
+      title: "Setting up choke group",
       command:
         "hold(AUDITION) press(7,8) turn(SELECT) menu(CHOKE) press(SELECT)",
     },
     {
-      description: "Cycle default scales",
+      title: "Cycle default scales",
       command: "hold(SHIFT) press(SCALE)",
     },
     {
-      description: "Change root note",
+      title: "Change root note",
       command: "hold(SCALE) press(AUDITION)",
     },
     {
-      description: "Alter current scale",
+      title: "Alter current scale",
       command: "hold(AUDITION) turn(SELECT)",
     },
     {
-      description: "Clone preset",
+      title: "Clone preset",
       command: "hold(LOAD) menu(CLONE) press(SELECT)",
     },
     {
-      description: "Kit clip affect all - first select parameter",
+      title: "Kit clip affect all",
+      description: "first select parameter",
       command: "hold(SHIFT) hold(GRID) press(ENTIRE) turn(SELECT)",
     },
     {
-      description: "Select kit/ instrument row silently",
+      title: "Select kit/ instrument row silently",
       command: "hold(SHIFT) press(AUDITION)",
     },
     {
-      description: "Change clip preset",
+      title: "Change clip preset",
       command: "turn(SELECT)",
     },
     {
-      description: "Transpose clip by octave",
+      title: "Transpose clip by octave",
       command: "hold(Y) turn(Y)",
     },
     {
-      description: "Transpose current clip by semitone (scale off)",
+      title: "Transpose current clip by semitone (scale off)",
       command: "hold(SHIFT) hold(Y) turn(Y)",
     },
     {
-      description: "Transpose all clips by semitone (scale on)",
+      title: "Transpose all clips by semitone (scale on)",
       command: "hold(SHIFT) hold(Y) turn(Y)",
     },
   ],
   "Waveforms, record-to-arranger, multi-sampling": [
     {
-      description:
+      title:
         "Chromatic sample - sample sample, different pitches (on new synth)",
       command:
         "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) press(SELECT)",
     },
     {
-      description: "Basic sample - load sample with no pitch detection",
+      title: "Basic sample - load sample with no pitch detection",
       command:
         "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(BASIC) press(SELECT)",
     },
     {
-      description: "Multi-sampling",
+      title: "Multi-sampling",
       command:
         "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(MULTI) press(SELECT)",
     },
     {
-      description: "Single cycle waveforms",
+      title: "Single cycle waveforms",
       command:
         "hold(AUDITION) press(LOAD) press(SELECT) turn(SELECT) hold(SELECT) menu(SINGLE) press(SELECT)",
     },
     {
-      description: "External sound source",
+      title: "External sound source",
       command: "hold(SHIFT) press(6,3) turn(SELECT) menu(IN) press(PLAY)",
     },
     {
-      description:
+      title:
         "Record to arranger - live record parameter changes and MIDI notes (RECORD to end)",
       command: "press(SONG) hold(RECORD) press(SONG)",
     },
     {
-      description:
+      title:
         "Append recording to existing arrangement (from arrangement mode; RECORD to end)",
       command: "turn(X) press(SONG) hold(RECORD) press(SONG)",
     },
     {
-      description: "Waveform edit view - change start / end / loop",
+      title: "Waveform edit view - change start / end / loop",
       command: "hold(SHIFT) press(1,1)",
     },
     {
-      description: "Zoom in and out",
+      title: "Zoom in and out",
       command: "hold(X) turn(X)",
     },
     {
-      description: "Move along waveform",
+      title: "Move along waveform",
       command: "turn(X)",
     },
     {
-      description: "Change start",
+      title: "Change start",
       command: "press(WAVE_START) press(GRID)",
     },
     {
-      description: "Change end",
+      title: "Change end",
       command: "press(WAVE_END) press(GRID)",
     },
     {
-      description: "Create loop start point",
+      title: "Create loop start point",
       command: "hold(WAVE_START) press(GRID)",
     },
     {
-      description: "Delete loop start point",
+      title: "Delete loop start point",
       command: "hold(WAVE_LOOP_START) press(WAVE_START)",
     },
     {
-      description: "Create loop end point",
+      title: "Create loop end point",
       command: "hold(WAVE_END) press(GRID)",
     },
     {
-      description: "Delete loop end point",
+      title: "Delete loop end point",
       command: "hold(WAVE_LOOP_END) press(WAVE_END)",
     },
   ],
   "Arranger view = song button flashing": [
     {
-      description: "Add clip into arranger",
+      title: "Add clip into arranger",
       command: "press(GRID_UNLIT)",
     },
     {
-      description: "Change / select instance's clip",
+      title: "Change / select instance's clip",
       command: "hold(GRID) turn(SELECT)",
     },
     {
-      description:
-        "Delete clip instance from arranger (left-most clip grid button)",
+      title: "Delete clip instance from arranger (left-most clip grid button)",
       command: "press(GRID_LIT)",
     },
     {
-      description: "Clear arranger clips (all clip instances)",
+      title: "Clear arranger clips (all clip instances)",
       command: "hold(X) press(BACK)",
     },
     {
-      description: "Move clip instance horizontally",
+      title: "Move clip instance horizontally",
       command: "hold(GRID_LIT) turn(X)",
     },
     {
-      description: "Move row vertically",
+      title: "Move row vertically",
       command: "hold(AUDITION) turn(Y)",
     },
     {
-      description: "Change instance length of clip",
+      title: "Change instance length of clip",
       command: "hold(GRID) press(GRID)",
     },
     {
-      description: "Mute / unmute",
+      title: "Mute / unmute",
       command: "press(LAUNCH)",
     },
     {
-      description: "Audition",
+      title: "Audition",
       command: "press(AUDITION)",
     },
     {
-      description: "Solo instrument",
+      title: "Solo instrument",
       command: "hold(X) press(LAUNCH)",
     },
     {
-      description: "Enter clip (anything besides left-most grid button)",
+      title: "Enter clip",
+      description: "anything besides left-most grid button",
       command: "press(GRID_LIT)",
     },
     {
-      description: "Scroll timeline with progress bar",
+      title: "Scroll timeline with progress bar",
       command: "press(CROSS)",
     },
     {
-      description: "Start playback from current screen",
+      title: "Start playback from current screen",
       command: "hold(X) press(PLAY)",
     },
     {
-      description:
-        "Make clip instance unique (white; left-most clip grid button)",
+      title: "Make clip instance unique",
+      description: "white; left-most clip grid button",
       command: "hold(SHIFT) press(GRID_LIT)",
     },
     {
-      description: "Adjust clip parameter of clip instance",
+      title: "Adjust clip parameter of clip instance",
       command: "hold(GRID_LIT) turn(PARAMETER)",
     },
     {
-      description:
+      title:
         "Copy clip from arranger to song mode, eg to save white instance as its own clip",
       command: "hold(GRID_LIT) press(SONG) turn(Y)",
     },
     {
-      description: "Copy clip from song to arranger mode",
+      title: "Copy clip from song to arranger mode",
       command: "hold(GRID_LIT) press(SONG) turn(X)",
     },
     {
+      title: "Insert / delete time",
       description:
-        "Insert / delete time; applies to currently visible screen (clockwise: insert; counter: delete)",
+        "applies to currently visible screen (clockwise: insert; counter: delete)",
       command: "hold(SHIFT) turn(X)",
     },
     {
-      description: "Enable loop play mode from arrange to song mode",
+      title: "Enable loop play mode from arrange to song mode",
       command: "press(AUDITION)",
     },
     {
-      description: "Disable loop play mode from arrange to song mode",
+      title: "Disable loop play mode from arrange to song mode",
       command: "press(LAUNCH)",
     },
     {
-      description: "Change instrument preset",
+      title: "Change instrument preset",
       command: "hold(AUDITION) turn(SELECT)",
     },
     {
-      description: "Change clip type to synth",
+      title: "Change clip type to synth",
       command: "hold(AUDITION) press(SYNTH)",
     },
     {
-      description: "Change clip type to MIDI",
+      title: "Change clip type to MIDI",
       command: "hold(AUDITION) press(MIDI)",
     },
     {
-      description: "Change clip type to CV",
+      title: "Change clip type to CV",
       command: "hold(AUDITION) press(CV)",
     },
     {
-      description: "Add new instrument clip from arranger view (unused row)",
+      title: "Add new instrument clip from arranger view (unused row)",
       command: "hold(AUDITION) turn(SELECT)",
     },
     {
-      description: "Add new synth clip type (unused row)",
+      title: "Add new synth clip type (unused row)",
       command: "hold(AUDITION) press(SYNTH)",
     },
     {
-      description: "Add new MIDI clip type (unused row)",
+      title: "Add new MIDI clip type (unused row)",
       command: "hold(AUDITION) press(MIDI)",
     },
     {
-      description: "Add new CV clip type (unused row)",
+      title: "Add new CV clip type (unused row)",
       command: "hold(AUDITION) press(CV)",
     },
     {
-      description: "Delete instrument row from arranger",
+      title: "Delete instrument row from arranger",
       command: "hold(AUDITION) press(SAVE)",
     },
     {
-      description: "Rename track",
+      title: "Rename track",
       command: "hold(AUDITION) press(3,12)",
     },
   ],
   "Parameter dials": [
     {
-      description:
-        "Assign gold dial control of parameters - first select parameter",
+      title: "Assign gold dial control of parameters - first select parameter",
       command: "hold(LEARN) turn(PARAMETER)",
     },
     {
-      description:
-        "Check gold dial control of parameters - first select parameter",
+      title: "Check gold dial control of parameters - first select parameter",
       command: "turn(PARAMETER)",
     },
     {
-      description: "Record automation of parameter",
+      title: "Record automation of parameter",
       command: "press(RECORD) press(PLAY) turn(PARAMETER)",
     },
     {
-      description: "Delete automation of recorded parameter",
+      title: "Delete automation of recorded parameter",
       command: "hold(SHIFT) press(PARAMETER)",
     },
     {
-      description: "Copy automation of parameter",
+      title: "Copy automation of parameter",
       command: "hold(LEARN) press(PARAMETER)",
     },
     {
-      description: "Paste automation of parameter",
+      title: "Paste automation of parameter",
       command: "hold(SHIFT) hold(LEARN) press(PARAMETER)",
     },
     {
-      description: "Parameter change / lock per note in clip view",
+      title: "Parameter change / lock per note in clip view",
       command: "hold(GRID_LIT) turn(PARAMETER)",
     },
     {
-      description: "Parameter change / lock per clip in song view",
+      title: "Parameter change / lock per clip in song view",
       command: "hold(GRID_LIT) turn(PARAMETER)",
     },
   ],
   "MIDI commands": [
     {
-      description: "Setup MIDI sequencing of notes",
+      title: "Setup MIDI sequencing of notes",
       command: "press(MIDI) turn(SELECT)",
     },
     {
-      description: "MIDI sequencing of parameters - first select parameter",
+      title: "MIDI sequencing of parameters - first select parameter",
       command: "hold(PARAMETER) turn(SELECT) turn(PARAMETER)",
     },
     {
-      description: "Record MIDI automation",
+      title: "Record MIDI automation",
       command: "press(RECORD) press(PLAY) turn(PARAMETER)",
     },
     {
-      description: "Record MIDI step automation",
+      title: "Record MIDI step automation",
       command: "hold(GRID) turn(PARAMETER)",
     },
     {
-      description: "Change dial control, but keep automation",
+      title: "Change dial control, but keep automation",
       command: "hold(PARAMETER) press(SELECT) turn(SELECT)",
     },
     {
-      description: "MIDI note output in a kit clip",
+      title: "MIDI note output in a kit clip",
       command: "press(KIT) hold(AUDITION) press(MIDI)",
     },
     {
-      description: "MIDI note output in a kit clip: MIDI channel assign",
+      title: "MIDI note output in a kit clip: MIDI channel assign",
       command: "hold(AUDITION) turn(LOWER_PARAM)",
     },
     {
-      description: "MIDI note output in a kit clip: MIDI note value",
+      title: "MIDI note output in a kit clip: MIDI note value",
       command: "hold(AUDITION) turn(UPPER_PARAM)",
     },
     {
-      description: "Settings menu for additional MIDI, CV, and Gate parameters",
+      title: "Settings menu for additional MIDI, CV, and Gate parameters",
       command: "hold(SHIFT) press(SELECT)",
     },
     {
-      description: "External controller to play synth or kit",
+      title: "External controller to play synth or kit",
       command: "hold(LEARN) hold(AUDITION) press(EXTERNAL)",
     },
     {
-      description: "External controller to trigger clip (from song mode)",
+      title: "External controller to trigger clip (from song mode)",
       command: "hold(LEARN) hold(AUDITION) press(EXTERNAL)",
     },
     {
-      description: "External controller to trigger play (from song mode)",
+      title: "External controller to trigger play (from song mode)",
       command: "hold(LEARN) hold(PLAY) press(EXTERNAL)",
     },
     {
-      description: "External controller to trigger record (from song mode)",
+      title: "External controller to trigger record (from song mode)",
       command: "hold(LEARN) hold(RECORD) press(EXTERNAL)",
     },
     {
-      description: "Unlearn external controller to play synth or kit",
+      title: "Unlearn external controller to play synth or kit",
       command: "hold(SHIFT) hold(LEARN) press(AUDITION)",
     },
     {
-      description:
-        "Unlearn external controller to trigger clip (from song mode)",
+      title: "Unlearn external controller to trigger clip (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(AUDITION)",
     },
     {
-      description:
-        "Unlearn external controller to trigger play (from song mode)",
+      title: "Unlearn external controller to trigger play (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(PLAY)",
     },
     {
-      description:
-        "Unlearn external controller to trigger record (from song mode)",
+      title: "Unlearn external controller to trigger record (from song mode)",
       command: "hold(SHIFT) hold(LEARN) hold(RECORD)",
     },
     {
-      description: "External control of parameter - first select parameter",
+      title: "External control of parameter - first select parameter",
       command: "hold(LEARN) press(EXTERNAL)",
     },
     {
-      description:
-        "Unlearn external control of parameter - first select parameter",
+      title: "Unlearn external control of parameter - first select parameter",
       command: "hold(SHIFT) hold(LEARN)",
     },
     {
-      description: "Nudge MIDI clock",
+      title: "Nudge MIDI clock",
       command: "hold(X) turn(TEMPO)",
     },
     {
-      description: "Record external notes",
+      title: "Record external notes",
       command: "press(RECORD) press(PLAY) press(EXTERNAL)",
     },
     {
-      description: "Sync scaling for unusual time signitures",
+      title: "Sync scaling for unusual time signitures",
       command: "press(SYNC)",
     },
     {
-      description:
-        "Mute by external MIDI for individual kit rows - in kit mode",
+      title: "Mute by external MIDI for individual kit rows - in kit mode",
       command: "hold(LEARN) hold(LAUNCH) press(EXTERNAL)",
     },
   ],
   "Looper in song mode": [
     {
-      description: "Toggle record arm",
+      title: "Toggle record arm",
       command: "hold(RECORD) press(LAUNCH)",
     },
     {
-      description: "Start loop record",
+      title: "Start loop record",
       command: "press(RECORD) press(PLAY)",
     },
     {
-      description: "Close loop recording - on recording clip row",
+      title: "Close loop recording - on recording clip row",
       command: "press(LAUNCH)",
     },
     {
-      description: "Close loop recording and immediately play in solo",
+      title: "Close loop recording and immediately play in solo",
       command: "hold(X) press(LAUNCH)",
     },
     {
-      description: "Record loop during playback",
+      title: "Record loop during playback",
       command: "press(RECORD) press(PLAY) press(LAUNCH)",
     },
     {
-      description:
-        "Record overdub - press grid directly underneath existing audio clip",
+      title: "Record overdub",
+      description: "press grid directly underneath existing audio clip",
       command: "press(RECORD) press(PLAY) hold(RECORD) press(GRID)",
     },
     {
-      description:
-        "Record overdub - with continuous layering - press grid directly underneath existing audio clip",
+      title: "Record overdub - with continuous layering",
+      description: "press grid directly underneath existing audio clip",
       command: "press(RECORD) press(PLAY) hold(RECORD) press(AUDITION)",
     },
     {
-      description:
-        "Tempo detection for loop pedal recording - start with a blank song",
+      title: "Tempo detection for loop pedal recording",
+      description: "start with a blank song",
       command: "hold(SHIFT) press(TAP)",
     },
     {
-      description: "Preset tempo for loop recording",
+      title: "Preset tempo for loop recording",
       command: "press(GRID_UNLIT) press(KIT) turn(TEMPO)",
     },
     {
-      description: "Grab tempo from existing audio clip",
+      title: "Grab tempo from existing audio clip",
       command: "hold(TEMPO) press(GRID_LIT)",
     },
     {
-      description: "Enable count-in before audio recording",
+      title: "Enable count-in before audio recording",
       command: "hold(SHIFT) press(SELECT) menu(RECORDING) menu(COUNT_IN)",
     },
   ],
