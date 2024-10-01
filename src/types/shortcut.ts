@@ -14,6 +14,13 @@ export type ControlDescriptions = {
   };
 };
 
+export type ViewDescription = {
+  [key in View]: {
+    title: string;
+    color: string;
+  };
+};
+
 export interface Step {
   action: Action;
   control: Control;

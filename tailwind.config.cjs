@@ -4,8 +4,8 @@ const config = {
   content: ["./src/**/*.{ts,js,svelte,ts}", "./index.html"],
 
   safelist: [
-    ...["red", "green", "blue", "purple"].map((c) => ({
-      pattern: new RegExp(`(text)-${c}`),
+    ...["neutral", "red", "green", "blue", "purple", "gold"].map((c) => ({
+      pattern: new RegExp(`(text|bg)-${c}`),
     })),
   ],
 
