@@ -7,9 +7,9 @@
 </script>
 
 {#if !description}
-  <span class="text-red-700 font-bold action">INVALID</span>
+  <span class="action font-bold text-red-700">INVALID</span>
 {:else}
-  <span class="{description.classes} font-medium action"
+  <span class="{description.classes} action font-medium"
     >{description.title}</span
   >
 {/if}

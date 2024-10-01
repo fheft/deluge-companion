@@ -29,7 +29,7 @@
 <input
   type="search"
   placeholder="Search... (⌨&#xFE0E; F)"
-  class="px-6 py-3 rounded-full block w-full bg-neutral-900 focus:bg-neutral-800 text-neutral-200 outline-neutral-600 focus:outline-2 outline-1 outline"
+  class="block w-full rounded-full bg-neutral-900 px-6 py-3 text-neutral-200 outline outline-1 outline-neutral-600 focus:bg-neutral-800 focus:outline-2"
   bind:value={input}
   bind:this={inputEl}
   on:keydown={handleInputKeyDown}

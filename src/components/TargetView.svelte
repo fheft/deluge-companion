@@ -16,7 +16,7 @@
 </script>
 
 {#if !description}
-  <span class="target-icon text-[#f00] font-bold">INVALID</span>
+  <span class="target-icon font-bold text-[#f00]">INVALID</span>
 {:else if description.type === CommandTargetType.circleButton}
   <span class="target-icon text-neutral-50"><CircleButton /></span>
   <span class="target-title uppercase">{@html description.title}</span>
@@ -45,7 +45,7 @@
   <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === CommandTargetType.display}
   <span class="target-icon">&nbsp;</span>
-  <span class=" target-title bg-neutral-900 text-white px-2 font-mono"
+  <span class=" target-title text-white bg-neutral-900 px-2 font-mono"
     >{command.text}</span
   >
   <span class="target-title font-mono uppercase">{@html description.title}</span
