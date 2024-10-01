@@ -6,7 +6,10 @@
 </script>
 
 <div class="flex gap-4">
-  {#each step.substeps as substep}
+  {#each step.substeps as substep, idx}
+    {#if idx > 0}
+      <span class="self-end">+</span>
+    {/if}
     <StepView bind:step={substep} />
   {/each}
 </div>
