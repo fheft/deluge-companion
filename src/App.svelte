@@ -1,48 +1,16 @@
 <script lang="ts">
-  import { v4_1_0 } from "./data/v4.1.0";
-  import type { Shortcut } from "./types/shortcut";
   import fuzzysort from "fuzzysort";
-  import { CommandAction } from "./data/actions";
-  import { CommandTarget } from "./data/targets";
   import ShortcutView from "./components/ShortcutView.svelte";
   import SearchView from "./components/SearchView.svelte";
+  import type { Shortcut } from "./types/shortcut";
+  import { v4_1_0 } from "./data/v4.1.0";
 
   const preparedShortcuts: Shortcut[] = Object.entries(v4_1_0).flatMap(
     ([category, shortcuts]) => {
-      const commandRegex = /([^(]+)\((.+)\)/g;
       return shortcuts.map((shortcut) => ({
         ...shortcut,
+        fuzzysortPrepared: fuzzysort.prepare(`${shortcut.name} ${category}`),
         category,
-        commands: shortcut.command.split(" ").map((str) => {
-          const match = [...str.matchAll(commandRegex)][0];
-          if (!match || match.length !== 3) {
-            throw new Error(`parsed shortcut command failure: ${str}`);
-          }
-          const [_, actionStr, targetStr] = match;
-          const action =
-            CommandAction[
-              actionStr.toUpperCase() as keyof typeof CommandAction
-            ];
-          if (action === CommandAction.MENU) {
-            return { action, target: CommandTarget.MENU_ITEM, text: targetStr };
-          }
-          if (/\d\d?,\d\d?/.test(targetStr)) {
-            return {
-              action,
-              target: CommandTarget.GRID,
-              text: targetStr,
-            };
-          }
-          const target = CommandTarget[targetStr as keyof typeof CommandTarget];
-          if (target == undefined) {
-            console.warn(
-              `No command target matched for string '${targetStr}'`,
-              shortcut,
-            );
-          }
-          return { action, target };
-        }),
-        fuzzysortPrepared: fuzzysort.prepare(`${shortcut.title} ${category}`),
       }));
     },
   );

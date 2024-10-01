@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Command } from "../types/shortcut.js";
   import { actionDescriptions } from "../data/actions";
+  import type { Step } from "../types/shortcut";
 
-  export let command: Command;
-  $: description = actionDescriptions[command.action];
+  export let step: Step;
+  $: description = actionDescriptions[step.action];
 </script>
 
 {#if !description}

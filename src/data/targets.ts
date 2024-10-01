@@ -1,16 +1,17 @@
-import type { CommandTargetDescriptions } from "../types/shortcut";
+import type { ControlDescriptions } from "../types/shortcut";
 
-export enum CommandTargetType {
+export enum ControlType {
+  none,
   circleButton,
   grid,
   gridCol,
   blackKnob,
   goldKnob,
-  display,
   external,
 }
 
-export enum CommandTarget {
+export enum Control {
+  NONE,
   RECORD,
   PLAY,
   LOAD,
@@ -43,158 +44,157 @@ export enum CommandTarget {
   WAVE_END,
   WAVE_LOOP_START,
   WAVE_LOOP_END,
-  MENU_ITEM,
   PARAMETER,
   LOWER_PARAM,
   UPPER_PARAM,
   EXTERNAL,
 }
 
-export const targetDescriptions: CommandTargetDescriptions = {
-  [CommandTarget.PLAY]: {
+export const controlDescriptions: ControlDescriptions = {
+  [Control.NONE]: {
+    title: "-",
+    type: ControlType.none,
+  },
+  [Control.PLAY]: {
     title: "Play",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.RECORD]: {
+  [Control.RECORD]: {
     title: "Record",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SONG]: {
+  [Control.SONG]: {
     title: "Song",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.LOAD]: {
+  [Control.LOAD]: {
     title: "Load",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SHIFT]: {
+  [Control.SHIFT]: {
     title: "Shift",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.BACK]: {
+  [Control.BACK]: {
     title: "Back / Undo",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SAVE]: {
+  [Control.SAVE]: {
     title: "Save",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.TAP]: {
+  [Control.TAP]: {
     title: "Tap tempo",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SYNC]: {
+  [Control.SYNC]: {
     title: "Sync-Scaling",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.LEARN]: {
+  [Control.LEARN]: {
     title: "Learn / Input",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.CLIP]: {
+  [Control.CLIP]: {
     title: "Clip",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SYNTH]: {
+  [Control.SYNTH]: {
     title: "Synth",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.KIT]: {
+  [Control.KIT]: {
     title: "Kit",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.MIDI]: {
+  [Control.MIDI]: {
     title: "Midi",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.CV]: {
+  [Control.CV]: {
     title: "CV",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.CROSS]: {
+  [Control.CROSS]: {
     title: "Cross-screen",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.ENTIRE]: {
+  [Control.ENTIRE]: {
     title: "Affect entire",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.KEY]: {
+  [Control.KEY]: {
     title: "Key (piano icon)",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.SCALE]: {
+  [Control.SCALE]: {
     title: "Scale",
-    type: CommandTargetType.circleButton,
+    type: ControlType.circleButton,
   },
-  [CommandTarget.X]: {
+  [Control.X]: {
     title: "◀&#xFE0E; ▶&#xFE0E;",
-    type: CommandTargetType.blackKnob,
+    type: ControlType.blackKnob,
   },
-  [CommandTarget.Y]: {
+  [Control.Y]: {
     title: "▼&#xFE0E;▲&#xFE0E;",
-    type: CommandTargetType.blackKnob,
+    type: ControlType.blackKnob,
   },
-  [CommandTarget.SELECT]: {
+  [Control.SELECT]: {
     title: "Select",
-    type: CommandTargetType.blackKnob,
+    type: ControlType.blackKnob,
   },
-  [CommandTarget.TEMPO]: { title: "Tempo", type: CommandTargetType.blackKnob },
-  [CommandTarget.GRID]: { title: "grid pad", type: CommandTargetType.grid },
-  [CommandTarget.GRID_UNLIT]: {
+  [Control.TEMPO]: { title: "Tempo", type: ControlType.blackKnob },
+  [Control.GRID]: { title: "grid pad", type: ControlType.grid },
+  [Control.GRID_UNLIT]: {
     title: "unlit grid pad",
-    type: CommandTargetType.grid,
+    type: ControlType.grid,
   },
-  [CommandTarget.GRID_LIT]: {
+  [Control.GRID_LIT]: {
     title: "lit grid pad",
-    type: CommandTargetType.grid,
+    type: ControlType.grid,
   },
-  [CommandTarget.AUDITION]: {
+  [Control.AUDITION]: {
     title: "Audition",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
   },
-  [CommandTarget.LAUNCH]: {
+  [Control.LAUNCH]: {
     title: "Launch",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
   },
-  [CommandTarget.WAVE_START]: {
+  [Control.WAVE_START]: {
     title: "Wave start",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
     color: "green-500",
   },
-  [CommandTarget.WAVE_END]: {
+  [Control.WAVE_END]: {
     title: "Wave end",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
     color: "red-500",
   },
-  [CommandTarget.WAVE_LOOP_START]: {
+  [Control.WAVE_LOOP_START]: {
     title: "Wave loop end",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
     color: "blue-500",
   },
-  [CommandTarget.WAVE_LOOP_END]: {
+  [Control.WAVE_LOOP_END]: {
     title: "Wave loop end",
-    type: CommandTargetType.gridCol,
+    type: ControlType.gridCol,
     color: "purple-500",
   },
-  [CommandTarget.MENU_ITEM]: {
-    title: "",
-    type: CommandTargetType.display,
-  },
-  [CommandTarget.LOWER_PARAM]: {
+  [Control.LOWER_PARAM]: {
     title: "lower gold knob",
-    type: CommandTargetType.goldKnob,
+    type: ControlType.goldKnob,
   },
-  [CommandTarget.PARAMETER]: {
+  [Control.PARAMETER]: {
     title: "gold knobs",
-    type: CommandTargetType.goldKnob,
+    type: ControlType.goldKnob,
   },
-  [CommandTarget.UPPER_PARAM]: {
+  [Control.UPPER_PARAM]: {
     title: "upper gold knob",
-    type: CommandTargetType.goldKnob,
+    type: ControlType.goldKnob,
   },
-  [CommandTarget.EXTERNAL]: {
+  [Control.EXTERNAL]: {
     title: "MIDI device",
-    type: CommandTargetType.external,
+    type: ControlType.external,
   },
 };

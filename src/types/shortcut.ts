@@ -1,30 +1,39 @@
-import type { CommandAction } from "../data/actions";
-import type { CommandTarget } from "../data/targets";
-import { CommandTargetType } from "../data/targets";
+import { ControlType, Control } from "../data/targets";
+import type { View } from "../data/views";
+import type { Action } from "../data/actions";
 
-export type Shortcut = {
-  title: string;
-  command: string;
-  category: string;
-  description: string;
-  commands: Command[];
-  fuzzysortPrepared: Fuzzysort.Prepared;
+export type ActionDescriptions = {
+  [key in Action]: { title: string; classes: string };
 };
 
-export type CommandActionDescriptions = {
-  [key in CommandAction]: { title: string; classes: string };
-};
-
-export type CommandTargetDescriptions = {
-  [key in CommandTarget]: {
+export type ControlDescriptions = {
+  [key in Control]: {
     title: string;
-    type: CommandTargetType;
+    type: ControlType;
     color?: string;
   };
 };
 
-export type Command = {
-  action: CommandAction;
-  target: CommandTarget;
-  text?: string;
+export interface Step {
+  action: Action;
+  control: Control;
+  label?: string;
+}
+
+export interface SubstepContainer {
+  substeps: Step[];
+}
+
+export type StepOrSubstep = Step | SubstepContainer;
+
+export type Shortcut = {
+  name: string;
+  views: View[];
+  steps: StepOrSubstep[];
+  category?: string;
+  fuzzysortPrepared?: Fuzzysort.Prepared;
+};
+
+export type ShortcutsRaw = {
+  [key: string]: Shortcut[];
 };

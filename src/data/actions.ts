@@ -1,26 +1,26 @@
-import type { CommandActionDescriptions } from "../types/shortcut";
+import type { ActionDescriptions } from "../types/shortcut";
 
-export enum CommandAction {
+export enum Action {
   PRESS,
   HOLD,
   TURN,
   MENU,
 }
 
-export const actionDescriptions: CommandActionDescriptions = {
-  [CommandAction.PRESS]: {
+export const actionDescriptions: ActionDescriptions = {
+  [Action.PRESS]: {
     title: "press",
     classes: "text-green-400",
   },
-  [CommandAction.HOLD]: {
+  [Action.HOLD]: {
     title: "hold",
     classes: "text-blue-400",
   },
-  [CommandAction.TURN]: {
+  [Action.TURN]: {
     title: "turn",
     classes: "text-purple-400",
   },
-  [CommandAction.MENU]: {
+  [Action.MENU]: {
     title: "menu",
     classes: "text-orange-400",
   },

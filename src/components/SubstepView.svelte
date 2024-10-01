@@ -1,0 +1,12 @@
+<script lang="ts">
+  import StepView from "./StepView.svelte";
+  import type { SubstepContainer } from "../types/shortcut";
+
+  export let step: SubstepContainer;
+</script>
+
+<div class="flex gap-4">
+  {#each step.substeps as substep}
+    <StepView bind:step={substep} />
+  {/each}
+</div>
