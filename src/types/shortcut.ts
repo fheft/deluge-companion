@@ -1,4 +1,3 @@
-import type Fuzzysort from "fuzzysort";
 import type { CommandAction } from "../data/actions";
 import type { CommandTarget } from "../data/targets";
 import { CommandTargetType } from "../data/targets";

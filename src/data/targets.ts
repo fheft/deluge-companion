@@ -160,22 +160,22 @@ export const targetDescriptions: CommandTargetDescriptions = {
   [CommandTarget.WAVE_START]: {
     title: "Wave start",
     type: CommandTargetType.gridCol,
-    color: "deluge-green",
+    color: "green-500",
   },
   [CommandTarget.WAVE_END]: {
     title: "Wave end",
     type: CommandTargetType.gridCol,
-    color: "deluge-red",
+    color: "red-500",
   },
   [CommandTarget.WAVE_LOOP_START]: {
     title: "Wave loop end",
     type: CommandTargetType.gridCol,
-    color: "deluge-blue",
+    color: "blue-500",
   },
   [CommandTarget.WAVE_LOOP_END]: {
     title: "Wave loop end",
     type: CommandTargetType.gridCol,
-    color: "deluge-purple",
+    color: "purple-500",
   },
   [CommandTarget.MENU_ITEM]: {
     title: "",

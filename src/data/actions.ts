@@ -10,18 +10,18 @@ export enum CommandAction {
 export const actionDescriptions: CommandActionDescriptions = {
   [CommandAction.PRESS]: {
     title: "press",
-    classes: "text-deluge-green",
+    classes: "text-green-400",
   },
   [CommandAction.HOLD]: {
     title: "hold",
-    classes: "text-deluge-blue",
+    classes: "text-blue-400",
   },
   [CommandAction.TURN]: {
     title: "turn",
-    classes: "text-deluge-purple",
+    classes: "text-purple-400",
   },
   [CommandAction.MENU]: {
     title: "menu",
-    classes: "text-deluge-orange",
+    classes: "text-orange-400",
   },
 };
