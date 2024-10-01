@@ -35,4 +35,4 @@
   on:keydown={handleInputKeyDown}
 />
 
-<svelte:window on:keydown|preventDefault={handleGlobalKeyDown} />
+<svelte:window on:keydown={handleGlobalKeyDown} />
