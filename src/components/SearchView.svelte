@@ -56,3 +56,9 @@
 </div>
 
 <svelte:window on:keydown={handleGlobalKeyDown} />
+
+<style lang="postcss">
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+</style>
