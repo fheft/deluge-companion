@@ -29,12 +29,37 @@
 
 <div class="mx-auto max-w-[70ch] px-2">
   <header class="mt-8">
+    <h1
+      class="mb-6 inline-block px-2 text-3xl font-light underline decoration-purple-500 decoration-dashed"
+    >
+      deluge<span class="font-medium text-purple-500">Companion</span>
+    </h1>
     <SearchView bind:input={searchInput} />
   </header>
 
   <main class="flex flex-col gap-4 py-8">
     {#each filteredShortcuts as shortcut}
       <ShortcutView bind:shortcut={shortcut.obj} />
+    {:else}
+      <p class="italic text-center">No matches</p>
     {/each}
   </main>
+
+  <footer class="my-6 text-center text-sm text-neutral-300">
+    <ul>
+      <li>
+        Privately operated website by <a
+          href="https://florianheft.de"
+          target="_blank"
+          class="underline"
+        >
+          Florian Heft
+        </a>.
+      </li>
+      <li class="italic">
+        Deluge is a trademark of Synthstrom. This project is not affiliated with
+        or endorsed by Synthstrom.
+      </li>
+    </ul>
+  </footer>
 </div>
