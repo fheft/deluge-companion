@@ -21,6 +21,15 @@ Then visit [http://localhost:5173](http://localhost:5173) to see the current dev
 [Svelte]: https://svelte.dev/
 [tailwindcss]: https://tailwindcss.com/
 
+## Adding or changing shortcuts
+
+All shortcuts are stored in the [src/data/v4.1.0.ts](src/data/v4.1.0.ts) file.
+Simply modify this file to add, edit or remove shortcuts.
+
+Contributions are welcome – especially for new [community firmware][] features!
+
+[community firmware]: https://github.com/SynthstromAudible/DelugeFirmware
+
 ## Acknowledgements
 
 * The list of shortcuts used by this project is based on [deluge-shortcuts][] by handeyeco – thanks for doing the tremendous 

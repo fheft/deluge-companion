@@ -57,7 +57,13 @@
           class="underline"
         >
           Florian Heft
-        </a>.
+        </a>
+        – contribute on
+        <a
+          href="https://github.com/fheft/deluge-companion"
+          target="_blank"
+          class="underline">GitHub</a
+        >!
       </li>
       <li class="italic">
         Deluge is a trademark of Synthstrom. This project is not affiliated with
