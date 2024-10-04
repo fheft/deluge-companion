@@ -4,4 +4,4 @@ import type { View } from "../types/shortcut";
 
 export const allViews = writable<View[]>(Object.values(viewsById));
 
-export const activeView = writable<Views | null>(Views.KIT);
+export const activeView = writable<Views | null>(null);
