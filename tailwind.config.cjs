@@ -91,6 +91,11 @@ const config = {
         950: "#3a1240",
       },
     },
+    extend: {
+      backgroundImage: {
+        "gradient-bg": "linear-gradient(140deg, #22262a 0%, #32373e 100%)",
+      },
+    },
   },
 
   plugins: [],
