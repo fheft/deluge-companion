@@ -2,6 +2,8 @@
 
 A website for easy browsing and searching of shortcuts for the [Synthstrom Deluge][].
 
+**[👉 See it in action!](https://fheft.github.io/deluge-companion/)**
+
 [Synthstrom Deluge]: https://synthstrom.com/product/deluge/
 
 ## Development

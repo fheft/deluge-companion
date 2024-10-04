@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "format": "prettier --write src/**/*.{svelte,ts,css}",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
@@ -15,6 +16,7 @@
     "@tsconfig/svelte": "^5.0.0",
     "autoprefixer": "^10.4.14",
     "fuzzysort": "^2.0.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.24",
     "postcss-load-config": "^4.0.1",
     "prettier": "^3.3.3",
