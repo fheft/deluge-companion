@@ -26,6 +26,7 @@
 
   function handleGlobalKeyDown(ev: KeyboardEvent) {
     if (["f", "F"].includes(ev.key)) {
+      ev.preventDefault();
       inputEl.focus();
     }
   }
