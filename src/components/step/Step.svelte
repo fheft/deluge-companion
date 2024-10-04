@@ -1,7 +1,7 @@
 <script lang="ts">
-  import ControlView from "./ControlView.svelte";
-  import ActionView from "./ActionView.svelte";
-  import type { Step } from "../types/shortcut";
+  import ControlView from "./StepControl.svelte";
+  import ActionView from "./StepAction.svelte";
+  import type { Step } from "../../types/shortcut";
 
   export let step: Step;
 </script>

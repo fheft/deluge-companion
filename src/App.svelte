@@ -1,7 +1,7 @@
 <script lang="ts">
   import fuzzysort from "fuzzysort";
-  import ShortcutView from "./components/ShortcutView.svelte";
-  import SearchView from "./components/SearchView.svelte";
+  import ShortcutView from "./components/Shortcut.svelte";
+  import SearchView from "./components/Search.svelte";
   import type { Shortcut } from "./types/shortcut";
   import { v4_1_0 } from "./data/v4.1.0";
 

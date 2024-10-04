@@ -1,12 +1,16 @@
 <script lang="ts">
-  import { Control, controlDescriptions, ControlType } from "../data/targets";
-  import CircleButton from "../icons/CircleButton.svelte";
-  import FullGrid from "../icons/FullGrid.svelte";
-  import Knob from "../icons/Knob.svelte";
-  import GridCol from "../icons/GridCol.svelte";
-  import Midi from "../icons/Midi.svelte";
-  import type { Step } from "../types/shortcut";
-  import { Action } from "../data/actions";
+  import {
+    Control,
+    controlDescriptions,
+    ControlType,
+  } from "../../data/targets";
+  import CircleButton from "../../icons/CircleButton.svelte";
+  import FullGrid from "../../icons/FullGrid.svelte";
+  import Knob from "../../icons/Knob.svelte";
+  import GridCol from "../../icons/GridCol.svelte";
+  import Midi from "../../icons/Midi.svelte";
+  import type { Step } from "../../types/shortcut";
+  import { Action } from "../../data/actions";
 
   export let step: Step;
   $: description = controlDescriptions[step.control];

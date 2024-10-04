@@ -3,9 +3,9 @@
     isStep,
     isSubstepContainer,
     type StepOrSubstep,
-  } from "../types/shortcut";
-  import StepView from "./StepView.svelte";
-  import SubstepView from "./SubstepView.svelte";
+  } from "../../types/shortcut";
+  import StepView from "./Step.svelte";
+  import SubstepView from "./Substep.svelte";
 
   export let step: StepOrSubstep;
 </script>

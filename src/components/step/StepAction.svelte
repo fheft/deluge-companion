@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { actionDescriptions } from "../data/actions";
-  import type { Step } from "../types/shortcut";
+  import { actionDescriptions } from "../../data/actions";
+  import type { Step } from "../../types/shortcut";
 
   export let step: Step;
   $: description = actionDescriptions[step.action];

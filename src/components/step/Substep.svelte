@@ -1,6 +1,6 @@
 <script lang="ts">
-  import StepView from "./StepView.svelte";
-  import type { SubstepContainer } from "../types/shortcut";
+  import StepView from "./Step.svelte";
+  import type { SubstepContainer } from "../../types/shortcut";
 
   export let step: SubstepContainer;
 </script>
