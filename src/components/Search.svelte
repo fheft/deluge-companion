@@ -1,18 +1,17 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Cross from "../icons/Cross.svelte";
-
-  export let input = "";
+  import { searchQuery } from "../stores/searchStore";
 
   let inputEl: HTMLInputElement;
-  $: hasContent = input.length > 0;
+  $: hasContent = $searchQuery.length > 0;
 
   onMount(() => {
     inputEl.focus();
   });
 
   function clear() {
-    input = "";
+    searchQuery.update(() => "");
     inputEl.blur();
   }
 
@@ -37,7 +36,7 @@
     type="search"
     placeholder="Search... (⌨&#xFE0E; F)"
     class=" w-full rounded-full bg-neutral-900 px-6 py-3 text-neutral-200 outline outline-1 outline-neutral-600 focus:bg-neutral-800 focus:outline-2"
-    bind:value={input}
+    bind:value={$searchQuery}
     bind:this={inputEl}
     on:keydown={handleInputKeyDown}
   />
