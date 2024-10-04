@@ -35,6 +35,9 @@
       deluge<span class="font-medium text-purple-500">Companion</span>
     </h1>
     <SearchView bind:input={searchInput} />
+    <p class="mt-4 text-sm text-neutral-500">
+      💡 Click on a shortcut to show the controls on the Deluge interface
+    </p>
   </header>
 
   <main class="flex flex-col gap-4 py-8">
