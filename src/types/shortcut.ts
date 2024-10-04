@@ -11,6 +11,7 @@ export type ControlDescriptions = {
     title: string;
     type: ControlType;
     color?: string;
+    classes?: string[];
   };
 };
 
@@ -44,3 +45,13 @@ export type Shortcut = {
 export type ShortcutsRaw = {
   [key: string]: Shortcut[];
 };
+
+export function isStep(candidate: StepOrSubstep): candidate is Step {
+  return "action" in candidate && "control" in candidate;
+}
+
+export function isSubstepContainer(
+  candidate: StepOrSubstep,
+): candidate is SubstepContainer {
+  return "substeps" in candidate;
+}

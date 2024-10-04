@@ -1,23 +1,13 @@
 <script lang="ts">
-  import type {
-    Step,
-    StepOrSubstep,
-    SubstepContainer,
+  import {
+    isStep,
+    isSubstepContainer,
+    type StepOrSubstep,
   } from "../types/shortcut";
   import StepView from "./StepView.svelte";
   import SubstepView from "./SubstepView.svelte";
 
   export let step: StepOrSubstep;
-
-  function isStep(candidate: StepOrSubstep): candidate is Step {
-    return "action" in candidate && "control" in candidate;
-  }
-
-  function isSubstepContainer(
-    candidate: StepOrSubstep,
-  ): candidate is SubstepContainer {
-    return "substeps" in candidate;
-  }
 </script>
 
 <div
