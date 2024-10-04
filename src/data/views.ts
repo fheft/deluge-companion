@@ -1,6 +1,6 @@
-import type { ViewDescription } from "../types/shortcut";
+import type { View } from "../types/shortcut";
 
-export enum View {
+export enum Views {
   GLOBAL,
   SONG,
   ARRANGER,
@@ -13,44 +13,58 @@ export enum View {
   CLIP,
 }
 
-export const viewDescriptions: ViewDescription = {
-  [View.GLOBAL]: {
-    title: "global",
+export type ViewsMap = {
+  [key in Views]: View;
+};
+
+export const viewsById: ViewsMap = {
+  [Views.GLOBAL]: {
+    id: Views.GLOBAL,
+    title: "Global",
     color: "neutral",
   },
-  [View.SONG]: {
+  [Views.SONG]: {
+    id: Views.SONG,
     title: "Song",
     color: "gold",
   },
-  [View.ARRANGER]: {
+  [Views.ARRANGER]: {
+    id: Views.ARRANGER,
     title: "Arranger",
     color: "red",
   },
-  [View.SYNTH]: {
+  [Views.SYNTH]: {
+    id: Views.SYNTH,
     title: "Synth",
     color: "green",
   },
-  [View.KIT]: {
+  [Views.KIT]: {
+    id: Views.KIT,
     title: "Kit",
     color: "green",
   },
-  [View.MIDI]: {
+  [Views.MIDI]: {
+    id: Views.MIDI,
     title: "MIDI",
     color: "blue",
   },
-  [View.CV]: {
+  [Views.CV]: {
+    id: Views.CV,
     title: "CV",
     color: "blue",
   },
-  [View.AUDIO]: {
+  [Views.AUDIO]: {
+    id: Views.AUDIO,
     title: "Audio",
     color: "purple",
   },
-  [View.WAVEFORM]: {
+  [Views.WAVEFORM]: {
+    id: Views.WAVEFORM,
     title: "Waveform",
     color: "purple",
   },
-  [View.CLIP]: {
+  [Views.CLIP]: {
+    id: Views.CLIP,
     title: "Clip",
     color: "purple",
   },

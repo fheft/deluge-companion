@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { Shortcut } from "../types/shortcut.js";
   import StepContainerView from "./step/StepContainer.svelte";
-  import { viewDescriptions } from "../data/views";
+  import { viewsById } from "../data/views";
   import DelugeView from "./DelugeUi.svelte";
 
   export let shortcut: Shortcut;
-  $: views = shortcut.views.map((v) => viewDescriptions[v]);
+  $: views = shortcut.views.map((v) => viewsById[v]);
 
   let showDetails: boolean = false;
 

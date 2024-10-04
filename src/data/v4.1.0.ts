@@ -1,13 +1,13 @@
 import { Action } from "./actions";
 import { Control } from "./targets";
-import { View } from "./views";
+import { Views } from "./views";
 import type { ShortcutsRaw } from "../types/shortcut";
 
 export const v4_1_0: ShortcutsRaw = {
   Global: [
     {
       name: "View zoom level",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -17,7 +17,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change zoom level",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -35,7 +35,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Scroll horizontal",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.TURN,
@@ -45,7 +45,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Scroll vertical",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.TURN,
@@ -55,7 +55,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Undo",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -65,7 +65,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Redo",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -83,7 +83,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "New song",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -101,7 +101,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete song",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -131,7 +131,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Load song",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -149,7 +149,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Save song",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -167,7 +167,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change tempo (course)",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.TURN,
@@ -177,7 +177,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change tempo (fine)",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -195,7 +195,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Metronome",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -213,7 +213,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Swing",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -231,7 +231,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "File system up",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -241,7 +241,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Adjust brightness",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -263,7 +263,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Settings menu",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -281,7 +281,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Save song, collect all samples",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           action: Action.PRESS,
@@ -303,7 +303,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Pad refresh rate",
-      views: [View.GLOBAL],
+      views: [Views.GLOBAL],
       steps: [
         {
           substeps: [
@@ -323,7 +323,7 @@ export const v4_1_0: ShortcutsRaw = {
   Sequencing: [
     {
       name: "Make long note",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -341,7 +341,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Make long note across the next screen",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -367,7 +367,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Adjust note velocity",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -385,7 +385,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Note probability; clockwise is iteration and counter is probability",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -403,7 +403,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Copy notes",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -421,7 +421,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Paste notes",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -443,7 +443,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Cross screen editing, real time note cloning",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -453,7 +453,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Add instrument / row to kit",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -479,7 +479,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Note zoom level - 128th and 256th level",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -497,7 +497,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record live - notes into sequencer",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -511,7 +511,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Duplicate clip content - double and append",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -529,7 +529,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip length",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -547,7 +547,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Shift all notes horizontally",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -565,7 +565,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clear clip",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -583,7 +583,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip color",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -601,7 +601,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change row color - instrument row in kit",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -623,7 +623,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Reorder kit clip row up or down",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -645,7 +645,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Note nudge individual note",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -667,7 +667,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clip play direction",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -686,7 +686,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Euclidian seq events - number of events / notes",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -708,7 +708,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Euclidian seq length - row length",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -726,7 +726,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Euclidian seq rotate - shift / rotate events or notes",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -750,7 +750,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Song view": [
     {
       name: "Launch clip - queue",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -760,7 +760,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Launch clip - immediately",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -778,7 +778,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Fast scroll song list",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -800,7 +800,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Create clip (empty row)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -810,7 +810,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Enter clip (non-empty row)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -820,7 +820,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Move row clip up or down",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -838,7 +838,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clip section color - change or create new",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -856,7 +856,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Launch section",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -866,7 +866,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Section repeat (hold audition for 1 sec)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.HOLD,
@@ -880,7 +880,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clone/duplicate clip (hold source, press destination)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -898,7 +898,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete clip",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -916,7 +916,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Solo clip - queue",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -934,7 +934,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Solo clip - immediately",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -956,7 +956,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clip parameter change (per clip)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -974,7 +974,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clip parameter change (per song)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -988,7 +988,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change existing clip preset",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1006,7 +1006,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change existing clip to synth",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1024,7 +1024,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change existing clip to MIDI",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1042,7 +1042,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change existing clip to CV",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1060,7 +1060,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Create audio track (in empty clip)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1078,7 +1078,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Check name and type of non-empty clip",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.HOLD,
@@ -1090,7 +1090,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Recording / Resampling - Samples in Kit": [
     {
       name: "Resample / record all audio output",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1108,7 +1108,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Loop resample",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1138,7 +1138,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record sample into a kit",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1160,7 +1160,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Load sample into a kit row",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1186,7 +1186,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Load sample into a kit row silently",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1216,7 +1216,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Synth resample",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1246,7 +1246,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Load all samples from folder to kit",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1281,7 +1281,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Slice sample",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           action: Action.HOLD,
@@ -1321,7 +1321,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Rename kit row or instrument",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1342,7 +1342,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Audio clips": [
     {
       name: "Create new audio clip in song view (press empty row)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1360,7 +1360,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Source for audio clip in song view",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -1386,7 +1386,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Create new audio track in arranger view",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -1404,7 +1404,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Source for audio clip in arranger view",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -1430,7 +1430,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clear audio clip recording",
-      views: [View.AUDIO],
+      views: [Views.AUDIO],
       steps: [
         {
           substeps: [
@@ -1448,7 +1448,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change color of audio wave",
-      views: [View.AUDIO],
+      views: [Views.AUDIO],
       steps: [
         {
           substeps: [
@@ -1466,7 +1466,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "End point / loop length (use red end point marker)",
-      views: [View.AUDIO],
+      views: [Views.AUDIO],
       steps: [
         {
           action: Action.PRESS,
@@ -1480,7 +1480,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Waveform start / end point",
-      views: [View.AUDIO],
+      views: [Views.AUDIO],
       steps: [
         {
           substeps: [
@@ -1499,7 +1499,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Adjust length - audio clip waveform",
-      views: [View.AUDIO],
+      views: [Views.AUDIO],
       steps: [
         {
           substeps: [
@@ -1519,7 +1519,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Modifying sounds": [
     {
       name: "New synth",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1537,7 +1537,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "New kit",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1555,7 +1555,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "View synth preset browser",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1573,7 +1573,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "View kit preset browser",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1591,7 +1591,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Save synth preset",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -1617,7 +1617,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Save kit preset",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1643,7 +1643,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Note keyboard view",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -1653,7 +1653,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clear notes and automation",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1671,7 +1671,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Setting up choke group",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1703,7 +1703,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Cycle default scales",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1721,7 +1721,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change root note",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1739,7 +1739,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Alter current scale",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1757,7 +1757,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clone synth preset",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -1796,7 +1796,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clone kit preset",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1835,7 +1835,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Kit clip affect all - first select parameter",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1861,7 +1861,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Select kit/ instrument row silently",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -1879,7 +1879,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip preset",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           action: Action.TURN,
@@ -1889,7 +1889,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Transpose clip by octave",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1907,7 +1907,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Transpose current clip by semitone (scale off)",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1929,7 +1929,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Transpose all clips by semitone (scale on)",
-      views: [View.SYNTH, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -1953,7 +1953,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Waveforms, record-to-arranger, multi-sampling": [
     {
       name: "Chromatic sample - same sample, different pitches (on new synth)",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -1983,7 +1983,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Basic sample - load sample with no pitch detection",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -2026,7 +2026,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Multi-sampling",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -2070,7 +2070,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Single cycle waveforms",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -2114,7 +2114,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External sound source",
-      views: [View.SYNTH],
+      views: [Views.SYNTH],
       steps: [
         {
           substeps: [
@@ -2146,7 +2146,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record to arranger - live record parameter changes and MIDI notes (RECORD to end)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -2164,7 +2164,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Append recording to existing arrangement (from arrangement mode; RECORD to end)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.TURN,
@@ -2190,7 +2190,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Waveform edit view - change start / end / loop",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -2209,7 +2209,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Zoom in and out",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           substeps: [
@@ -2227,7 +2227,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Move along waveform",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           action: Action.TURN,
@@ -2237,7 +2237,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change start",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           action: Action.PRESS,
@@ -2251,7 +2251,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change end",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           action: Action.PRESS,
@@ -2265,7 +2265,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Create loop start point",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           substeps: [
@@ -2283,7 +2283,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete loop start point",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           substeps: [
@@ -2301,7 +2301,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Create loop end point",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           substeps: [
@@ -2319,7 +2319,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete loop end point",
-      views: [View.WAVEFORM],
+      views: [Views.WAVEFORM],
       steps: [
         {
           substeps: [
@@ -2339,7 +2339,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Arranger view = song button flashing": [
     {
       name: "Add clip into arranger",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2349,7 +2349,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change / select instance's clip",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2367,7 +2367,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete clip instance from arranger (left-most clip grid button)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2377,7 +2377,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Clear arranger clips (all clip instances)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2395,7 +2395,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Move clip instance horizontally",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2413,7 +2413,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Move row vertically",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2431,7 +2431,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change instance length of clip",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2449,7 +2449,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Mute / unmute",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2459,7 +2459,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Audition",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2469,7 +2469,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Solo instrument",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2487,7 +2487,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Enter clip (anything besides left-most grid button)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2497,7 +2497,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Scroll timeline with progress bar",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2507,7 +2507,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Start playback from current screen",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2525,7 +2525,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Make clip instance unique (white; left-most clip grid button)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2543,7 +2543,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Adjust clip parameter of clip instance",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2561,7 +2561,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Copy clip from arranger to song mode, eg to save white instance as its own clip",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2583,7 +2583,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Copy clip from song to arranger mode",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2605,7 +2605,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Insert / delete time; applies to currently visible screen (clockwise: insert; counter: delete)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2623,7 +2623,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Enable loop play mode from arrange to song mode",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2633,7 +2633,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Disable loop play mode from arrange to song mode",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           action: Action.PRESS,
@@ -2643,7 +2643,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change instrument preset",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2661,7 +2661,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip type to synth",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2679,7 +2679,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip type to MIDI",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2697,7 +2697,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change clip type to CV",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2715,7 +2715,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Add new instrument clip from arranger view (unused row)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2733,7 +2733,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Add new synth clip type (unused row)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2751,7 +2751,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Add new MIDI clip type (unused row)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2769,7 +2769,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Add new CV clip type (unused row)",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2787,7 +2787,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete instrument row from arranger",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2805,7 +2805,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Rename track",
-      views: [View.ARRANGER],
+      views: [Views.ARRANGER],
       steps: [
         {
           substeps: [
@@ -2826,7 +2826,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Parameter dials": [
     {
       name: "Assign gold dial control of parameters - first select parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -2844,7 +2844,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Check gold dial control of parameters - first select parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           action: Action.TURN,
@@ -2854,7 +2854,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record automation of parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           action: Action.PRESS,
@@ -2872,7 +2872,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Delete automation of recorded parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -2890,7 +2890,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Copy automation of parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -2908,7 +2908,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Paste automation of parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -2930,7 +2930,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Parameter change / lock per note in clip view",
-      views: [View.CLIP],
+      views: [Views.CLIP],
       steps: [
         {
           substeps: [
@@ -2948,7 +2948,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Parameter change / lock per clip in song view",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -2968,7 +2968,7 @@ export const v4_1_0: ShortcutsRaw = {
   "MIDI commands": [
     {
       name: "Setup MIDI sequencing of notes",
-      views: [View.SYNTH, View.KIT, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -2982,7 +2982,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "MIDI sequencing of parameters - first select parameter",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           substeps: [
@@ -3004,7 +3004,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record MIDI automation",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           action: Action.PRESS,
@@ -3022,7 +3022,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record MIDI step automation",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           substeps: [
@@ -3040,7 +3040,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Change dial control, but keep automation",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           substeps: [
@@ -3062,7 +3062,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "MIDI note output in a kit clip",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -3080,7 +3080,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "MIDI note output in a kit clip: MIDI channel assign",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -3098,7 +3098,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "MIDI note output in a kit clip: MIDI note value",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -3116,7 +3116,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Settings menu for additional MIDI, CV, and Gate parameters",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           substeps: [
@@ -3134,7 +3134,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External controller to play synth or kit",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -3156,7 +3156,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External controller to trigger clip (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3178,7 +3178,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External controller to trigger play (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3200,7 +3200,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External controller to trigger record (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3222,7 +3222,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Unlearn external controller to play synth or kit",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           substeps: [
@@ -3244,7 +3244,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Unlearn external controller to trigger clip (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3266,7 +3266,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Unlearn external controller to trigger play (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3288,7 +3288,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Unlearn external controller to trigger record (from song mode)",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3310,7 +3310,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "External control of parameter - first select parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -3328,7 +3328,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Unlearn external control of parameter - first select parameter",
-      views: [View.SYNTH, View.KIT],
+      views: [Views.SYNTH, Views.KIT],
       steps: [
         {
           substeps: [
@@ -3346,7 +3346,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Nudge MIDI clock",
-      views: [View.MIDI],
+      views: [Views.MIDI],
       steps: [
         {
           substeps: [
@@ -3364,7 +3364,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record external notes",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -3382,7 +3382,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Sync scaling for unusual time signitures",
-      views: [View.SYNTH, View.KIT, View.MIDI, View.CV],
+      views: [Views.SYNTH, Views.KIT, Views.MIDI, Views.CV],
       steps: [
         {
           action: Action.PRESS,
@@ -3392,7 +3392,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Mute by external MIDI for individual kit rows - in kit mode",
-      views: [View.KIT],
+      views: [Views.KIT],
       steps: [
         {
           substeps: [
@@ -3416,7 +3416,7 @@ export const v4_1_0: ShortcutsRaw = {
   "Looper in song mode": [
     {
       name: "Toggle record arm",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3434,7 +3434,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Start loop record",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3448,7 +3448,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Close loop recording - on recording clip row",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3458,7 +3458,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Close loop recording and immediately play in solo",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3476,7 +3476,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record loop during playback",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3494,7 +3494,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record overdub - press grid directly underneath existing audio clip",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3520,7 +3520,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Record overdub - with continuous layering - press grid directly underneath existing audio clip",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3546,7 +3546,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Tempo detection for loop pedal recording - start with a blank song",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3564,7 +3564,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Preset tempo for loop recording",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           action: Action.PRESS,
@@ -3582,7 +3582,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Grab tempo from existing audio clip",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [
@@ -3600,7 +3600,7 @@ export const v4_1_0: ShortcutsRaw = {
     },
     {
       name: "Enable count-in before audio recording",
-      views: [View.SONG],
+      views: [Views.SONG],
       steps: [
         {
           substeps: [

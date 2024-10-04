@@ -1,5 +1,5 @@
 import { ControlType, Control } from "../data/targets";
-import type { View } from "../data/views";
+import type { Views } from "../data/views";
 import type { Action } from "../data/actions";
 
 export type ActionDescriptions = {
@@ -15,11 +15,14 @@ export type ControlDescriptions = {
   };
 };
 
-export type ViewDescription = {
-  [key in View]: {
-    title: string;
-    color: string;
-  };
+export type View = {
+  id: Views;
+  title: string;
+  color: string;
+};
+
+export type ViewsMap = {
+  [key in Views]: View;
 };
 
 export interface Step {
@@ -36,7 +39,7 @@ export type StepOrSubstep = Step | SubstepContainer;
 
 export type Shortcut = {
   name: string;
-  views: View[];
+  views: Views[];
   steps: StepOrSubstep[];
   category?: string;
   fuzzysortPrepared?: Fuzzysort.Prepared;
