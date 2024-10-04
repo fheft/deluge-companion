@@ -5,7 +5,8 @@ const config = {
 
   safelist: [
     ...["neutral", "red", "green", "blue", "purple", "gold"].map((c) => ({
-      pattern: new RegExp(`(text|bg)-${c}`),
+      /* programmatically colored 'view' pills */
+      pattern: new RegExp(`^(text-${c}-950|bg-${c}-300)$`),
     })),
   ],
 
