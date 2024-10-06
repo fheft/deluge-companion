@@ -15,6 +15,10 @@ press(X)
 hold(X) + turn(X)
 ```
 
+When you `turn(X)` clockwise, the resolution doubles. So instead of 16th notes, you'll see 32nd notes displayed.
+
+Similarly, when you `turn(X)` counterclockwise, the resolution is halved.
+
 
 # Scroll horizontal
     
