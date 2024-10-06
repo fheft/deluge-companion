@@ -1,10 +1,54 @@
 import { derived, writable } from "svelte/store";
-import { v4_1_0 } from "../data/v4.1.0";
+import jsonData from "../data/v4.1.0.json";
 import fuzzysort from "fuzzysort";
 import { searchQuery } from "./searchStore";
 import { activeView } from "./viewStore";
+import type {
+  Shortcut,
+  ShortcutsRaw,
+  Step,
+  StepOrSubstep,
+  SubstepContainer,
+} from "../types/shortcut";
+import { Action } from "../data/actions";
+import { Control } from "../data/targets";
+import { Views } from "../data/views";
 
-const rawShortcuts = writable(v4_1_0);
+function convertStep(rawStep: any): Step {
+  return {
+    action: Action[rawStep.action as keyof typeof Action],
+    control: Control[rawStep.control as keyof typeof Control],
+  };
+}
+function convertView(view: string): Views {
+  return Views[view as keyof typeof Views];
+}
+
+const convertedRawShortcuts: ShortcutsRaw = Object.fromEntries(
+  Object.entries(jsonData).map(([group, shortcuts]) => {
+    const convertedShortcuts = shortcuts.map((shortcut) => {
+      const steps: StepOrSubstep[] = shortcut.steps.map((step: any) => {
+        if (step.substeps) {
+          const convertedSubstepContainer: SubstepContainer = {
+            substeps: step.substeps.map(convertStep),
+          };
+          return convertedSubstepContainer;
+        }
+        return convertStep(step);
+      });
+
+      const converted: Shortcut = {
+        name: shortcut.name,
+        views: shortcut.views ? shortcut.views.map(convertView) : [],
+        steps,
+      };
+      return converted;
+    });
+    return [group, convertedShortcuts];
+  }),
+);
+
+const rawShortcuts = writable(convertedRawShortcuts);
 
 const allShortcuts = derived(rawShortcuts, ($rawShortcuts) => {
   return Object.entries($rawShortcuts).flatMap(([category, shortcuts]) => {
