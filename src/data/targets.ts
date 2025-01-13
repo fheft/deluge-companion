@@ -1,4 +1,4 @@
-import type { ControlDescriptions } from "../types/shortcut";
+import type { ControlDescriptions } from "../types/shortcut.js";
 
 export enum ControlType {
   none,

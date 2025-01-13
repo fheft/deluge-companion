@@ -1,4 +1,4 @@
-import type { View } from "../types/shortcut";
+import type { View } from "../types/shortcut.js";
 
 export enum Views {
   GLOBAL,

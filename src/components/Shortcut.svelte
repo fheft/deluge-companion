@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Shortcut } from "../types/shortcut.js";
   import StepContainerView from "./step/StepContainer.svelte";
-  import { viewsById } from "../data/views";
+  import { viewsById } from "../data/views.js";
   import DelugeView from "./DelugeUi.svelte";
 
   export let shortcut: Shortcut;

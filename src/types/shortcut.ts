@@ -1,6 +1,7 @@
-import { ControlType, Control } from "../data/targets";
-import type { Views } from "../data/views";
-import type { Action } from "../data/actions";
+import { ControlType, Control } from "../data/targets.js";
+import type { Views } from "../data/views.js";
+import type { Action } from "../data/actions.js";
+import type Fuzzysort from "fuzzysort";
 
 export type ActionDescriptions = {
   [key in Action]: { title: string; classes: string };

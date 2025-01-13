@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { activeView } from "../stores/viewStore";
-  import type { View } from "../types/shortcut";
+  import { activeView } from "../stores/viewStore.js";
+  import type { View } from "../types/shortcut.js";
   export let view: View;
 
   $: isActive = $activeView != null && $activeView === view.id;

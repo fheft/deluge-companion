@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { controlDescriptions, ControlType } from "../data/targets";
-  import { isStep, type StepOrSubstep } from "../types/shortcut";
+  import { controlDescriptions } from "../data/targets.js";
+  import { isStep, type StepOrSubstep } from "../types/shortcut.js";
   import DelugeUiLabels from "./DelugeUiLabels.svelte";
 
   export let steps: StepOrSubstep[];

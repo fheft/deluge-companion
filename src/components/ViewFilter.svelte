@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { allViews } from "../stores/viewStore";
+  import { allViews } from "../stores/viewStore.js";
   import ViewFilterItem from "./ViewFilterItem.svelte";
 </script>
 

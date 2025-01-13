@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import Cross from "../icons/Cross.svelte";
-  import { searchQuery } from "../stores/searchStore";
+  import { searchQuery } from "../stores/searchStore.js";
 
   let inputEl: HTMLInputElement;
   $: hasContent = $searchQuery.length > 0;

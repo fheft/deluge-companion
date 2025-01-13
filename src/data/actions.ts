@@ -1,4 +1,4 @@
-import type { ActionDescriptions } from "../types/shortcut";
+import type { ActionDescriptions } from "../types/shortcut.js";
 
 export enum Action {
   PRESS,
