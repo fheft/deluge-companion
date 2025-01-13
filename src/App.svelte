@@ -1,11 +1,18 @@
 <script lang="ts">
-  import PageHeader from "./components/PageHeader.svelte";
-  import PageMain from "./components/PageMain.svelte";
-  import PageFooter from "./components/PageFooter.svelte";
+  import ShortcutsView from "./views/ShortcutsView.svelte";
+  import EditorView from "./views/EditorView.svelte";
+
+  let currentView: string = "";
+  const updateView = () => {
+    currentView = window.location.hash;
+  };
+  updateView();
 </script>
 
-<div class="mx-auto max-w-[70ch] px-2">
-  <PageHeader />
-  <PageMain />
-  <PageFooter />
-</div>
+{#if currentView === ""}
+  <ShortcutsView />
+{:else if currentView === "#editor"}
+  <EditorView />
+{/if}
+
+<svelte:window on:hashchange={updateView} />
