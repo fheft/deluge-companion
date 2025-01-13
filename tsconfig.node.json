@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler"
+    "target": "ESNext",
+    "module": "nodenext",
+    "rootDir": "src/",
+    "outDir": "build",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "types": ["node"]
   },
-  "include": ["vite.config.ts"]
+  "include": ["src/utils/**/*.ts"]
 }
