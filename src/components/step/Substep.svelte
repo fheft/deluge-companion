@@ -3,6 +3,7 @@
   import type { SubstepContainer } from "../../types/shortcut";
 
   export let step: SubstepContainer;
+  export let inline: boolean;
 </script>
 
 <div class="flex gap-4">
@@ -10,6 +11,6 @@
     {#if idx > 0}
       <span class="self-end">+</span>
     {/if}
-    <StepView bind:step={substep} />
+    <StepView bind:step={substep} {inline} />
   {/each}
 </div>

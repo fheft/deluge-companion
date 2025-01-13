@@ -8,14 +8,19 @@
   import SubstepView from "./Substep.svelte";
 
   export let step: StepOrSubstep;
+  export let inline: boolean = false;
 </script>
 
 <div
-  class="rounded-md border border-neutral-600 bg-neutral-700 px-4 py-2 shadow-sm"
+  class="rounded-md border border-neutral-600 bg-neutral-700 align-bottom shadow-sm"
+  class:px-2={inline}
+  class:px-4={!inline}
+  class:py-2={!inline}
+  class:inline-block={inline}
 >
   {#if isStep(step)}
-    <StepView bind:step />
+    <StepView bind:step bind:inline />
   {:else if isSubstepContainer(step)}
-    <SubstepView bind:step />
+    <SubstepView bind:step bind:inline />
   {/if}
 </div>

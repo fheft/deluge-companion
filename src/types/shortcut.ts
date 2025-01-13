@@ -22,10 +22,6 @@ export type View = {
   color: string;
 };
 
-export type ViewsMap = {
-  [key in Views]: View;
-};
-
 export interface Step {
   action: Action;
   control: Control;
@@ -42,12 +38,17 @@ export type Shortcut = {
   name: string;
   views: Views[];
   steps: StepOrSubstep[];
-  category?: string;
+  paragraphs: Paragraph[];
   fuzzysortPrepared?: Fuzzysort.Prepared;
 };
 
-export type ShortcutsRaw = {
-  [key: string]: Shortcut[];
+export type Paragraph = {
+  spans: Span[];
+};
+
+export type Span = {
+  steps?: StepOrSubstep[];
+  text?: string;
 };
 
 export function isStep(candidate: StepOrSubstep): candidate is Step {

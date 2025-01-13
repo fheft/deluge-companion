@@ -13,16 +13,20 @@
   import { Action } from "../../data/actions";
 
   export let step: Step;
+  export let inline: boolean;
+
   $: description = controlDescriptions[step.control];
 </script>
 
 {#if step.action === Action.MENU}
-  <span class="target-icon">&nbsp;</span>
+  <span class="target-icon" class:hidden={inline}>&nbsp;</span>
   <span class="target-title">{@html step.label}</span>
 {:else if description.type === ControlType.none}
   <span class="target-icon font-bold text-[#f00]">INVALID</span>
 {:else if description.type === ControlType.circleButton}
-  <span class="target-icon text-neutral-50"><CircleButton /></span>
+  <span class="target-icon text-neutral-50" class:hidden={inline}
+    ><CircleButton /></span
+  >
   <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === ControlType.grid}
   <span
@@ -30,6 +34,7 @@
       (step.control === Control.GRID_LIT
         ? "text-green-300"
         : "text-neutral-300")}
+    class:hidden={inline}
   >
     <FullGrid />
   </span>
@@ -37,29 +42,34 @@
 {:else if description.type === ControlType.gridCol}
   <span
     class={"target-icon " + (description.color && `text-${description.color}`)}
+    class:hidden={inline}
   >
     <GridCol />
   </span>
   <span class="target-title">{@html description.title}</span>
 {:else if description.type === ControlType.blackKnob}
-  <span class="target-icon text-neutral-900"><Knob /></span>
+  <span class="target-icon text-neutral-900" class:hidden={inline}
+    ><Knob /></span
+  >
   <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === ControlType.goldKnob}
-  <span class="target-icon text-gold-300"><Knob /></span>
+  <span class="target-icon text-gold-300" class:hidden={inline}><Knob /></span>
   <span class="target-title uppercase">{@html description.title}</span>
 {:else if description.type === ControlType.display}
-  <span class="target-icon">&nbsp;</span>
-  <span class=" target-title text-white bg-neutral-900 px-2 font-mono"
+  <span class="target-icon" class:hidden={inline}>&nbsp;</span>
+  <span class="target-title text-white bg-neutral-900 px-2 font-mono"
     >{step.label}</span
   >
   <span class="target-title font-mono uppercase">{@html description.title}</span
   >
 {:else if description.type === ControlType.external}
-  <span class="target-icon text-neutral-700"><Midi /></span>
+  <span class="target-icon text-neutral-700" class:hidden={inline}
+    ><Midi /></span
+  >
   <span class="target-title italic">{@html description.title}</span>
 {/if}
 
-<style type="postcss">
+<style lang="postcss">
   .target-icon {
     grid-area: target-icon;
   }

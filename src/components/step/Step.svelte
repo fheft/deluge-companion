@@ -4,11 +4,12 @@
   import type { Step } from "../../types/shortcut";
 
   export let step: Step;
+  export let inline: boolean = false;
 </script>
 
 <div class="step step grid items-baseline justify-items-center gap-x-2 gap-y-0">
   <ActionView {step} />
-  <ControlView {step} />
+  <ControlView {step} {inline} />
 </div>
 
 <style>

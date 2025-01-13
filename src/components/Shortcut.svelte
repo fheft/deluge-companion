@@ -3,6 +3,7 @@
   import StepContainerView from "./step/StepContainer.svelte";
   import { viewsById } from "../data/views.js";
   import DelugeView from "./DelugeUi.svelte";
+  import ParagraphView from "./ParagraphView.svelte";
 
   export let shortcut: Shortcut;
   $: views = shortcut.views.map((v) => viewsById[v]);
@@ -30,6 +31,9 @@
       <StepContainerView bind:step />
     {/each}
   </button>
+  {#each shortcut.paragraphs as paragraph}
+    <ParagraphView bind:paragraph />
+  {/each}
   {#if showDetails}
     <div class="mt-4 border border-neutral-600">
       <DelugeView bind:steps={shortcut.steps} />
