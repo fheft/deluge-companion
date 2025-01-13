@@ -5,59 +5,31 @@ import { searchQuery } from "./searchStore";
 import { activeView } from "./viewStore";
 import type {
   Shortcut,
-  ShortcutsRaw,
-  Step,
   StepOrSubstep,
   SubstepContainer,
 } from "../types/shortcut";
-import { Action } from "../data/actions";
-import { Control } from "../data/targets";
-import { Views } from "../data/views";
 
-function convertStep(rawStep: any): Step {
-  return {
-    action: Action[rawStep.action as keyof typeof Action],
-    control: Control[rawStep.control as keyof typeof Control],
-  };
-}
-function convertView(view: string): Views {
-  return Views[view as keyof typeof Views];
-}
-
-const convertedRawShortcuts: ShortcutsRaw = Object.fromEntries(
-  Object.entries(jsonData).map(([group, shortcuts]) => {
-    const convertedShortcuts = shortcuts.map((shortcut) => {
-      const steps: StepOrSubstep[] = shortcut.steps.map((step: any) => {
-        if (step.substeps) {
-          const convertedSubstepContainer: SubstepContainer = {
-            substeps: step.substeps.map(convertStep),
-          };
-          return convertedSubstepContainer;
-        }
-        return convertStep(step);
-      });
-
-      const converted: Shortcut = {
-        name: shortcut.name,
-        views: shortcut.views ? shortcut.views.map(convertView) : [],
-        steps,
+const convertedRawShortcuts: Shortcut[] = jsonData.map((shortcut) => {
+  const steps: StepOrSubstep[] = shortcut.steps.map((step: any) => {
+    if (step.substeps) {
+      const convertedSubstepContainer: SubstepContainer = {
+        substeps: step.substeps,
       };
-      return converted;
-    });
-    return [group, convertedShortcuts];
-  }),
-);
+      return convertedSubstepContainer;
+    }
+    return step;
+  });
+
+  return { ...shortcut, steps };
+});
 
 const rawShortcuts = writable(convertedRawShortcuts);
 
 const allShortcuts = derived(rawShortcuts, ($rawShortcuts) => {
-  return Object.entries($rawShortcuts).flatMap(([category, shortcuts]) => {
-    return shortcuts.map((shortcut) => ({
-      ...shortcut,
-      fuzzysortPrepared: fuzzysort.prepare(`${shortcut.name} ${category}`),
-      category,
-    }));
-  });
+  return $rawShortcuts.map((shortcut) => ({
+    ...shortcut,
+    fuzzysortPrepared: fuzzysort.prepare(`${shortcut.name}}`),
+  }));
 });
 
 const filteredByViews = derived(
