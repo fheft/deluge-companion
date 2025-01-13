@@ -23,8 +23,15 @@ Then visit [http://localhost:5173](http://localhost:5173) to see the current dev
 
 ## Adding or changing shortcuts
 
-All shortcuts are stored in the [src/data/v4.1.0.ts](src/data/v4.1.0.ts) file.
-Simply modify this file to add, edit or remove shortcuts.
+All shortcuts are stored in as Markdown files in the [src/data/shortcuts](src/data/shortcuts) directory.
+Simply modify these files to add, edit or remove shortcuts.
+
+After changing the Markdown files, compile the changes into JSON to see them applied on the website:
+
+```shell
+npm run converter:build
+npm run converter:run
+```
 
 Contributions are welcome – especially for new [community firmware][] features!
 
