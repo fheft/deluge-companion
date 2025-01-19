@@ -10,8 +10,8 @@
     "format": "prettier --write src/**/*.{svelte,ts,css}",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "converter:build": "node build/src/utils/convert-md-to-json.js",
-    "converter:run": "npx tsc --project tsconfig.node.json"
+    "converter:build": "npx tsc --project tsconfig.node.json",
+    "converter:run": "node build/src/utils/convert-md-to-json.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
