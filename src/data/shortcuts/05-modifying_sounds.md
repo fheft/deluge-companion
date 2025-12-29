@@ -157,3 +157,68 @@ hold(SHIFT) + hold(Y) + turn(Y)
 ```shortcut
 hold(SHIFT) + hold(Y) + turn(Y)
 ```
+
+# Randomize drum sample (selected drum)
+
+#KIT
+
+```shortcut
+hold(LOAD) + press(RANDOM_PATCH_SOURCE)
+```
+
+# Randomize drum sample (multiple selected)
+
+#KIT
+
+```shortcut
+hold(LOAD) + hold(AUDITION) + press(RANDOM_PATCH_SOURCE)
+```
+
+# Randomize all active drums
+
+#KIT
+
+```shortcut
+hold(LOAD) + hold(ENTIRE) + press(RANDOM_PATCH_SOURCE)
+```
+
+# Delete unused kit rows
+
+#KIT
+
+```shortcut
+hold(KIT) + hold(SHIFT) + press(SAVE)
+```
+
+# Note Probability
+
+#SYNTH #KIT #MIDI #CV
+
+```shortcut
+hold(SHIFT) + press(NOTE_PATCH_SOURCE)
+```
+
+# Randomizer Lock
+
+#SYNTH #KIT #MIDI #CV
+
+```shortcut
+hold(SHIFT) + press(RANDOM_PATCH_SOURCE)
+```
+
+# Velocity Probability
+
+#SYNTH #KIT #MIDI #CV
+
+```shortcut
+hold(SHIFT) + press(VELOCITY_PATCH_SOURCE)
+```
+
+# Manual Slicing (Lazy Chop)
+
+#KIT
+
+```shortcut
+press(X)
+```
+While in Slice Menu.

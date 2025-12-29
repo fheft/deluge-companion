@@ -153,3 +153,21 @@ press(SAVE), turn(SELECT), hold(SELECT), press(SELECT)
 ```shortcut
 hold(CLIP) + turn(SELECT)
 ```
+
+# Start playback from current scroll position (Alternative Playback)
+
+#GLOBAL
+
+```shortcut
+press(PLAY)
+```
+Requires "Alternative Playback Start Behaviour" enabled. With playback off.
+
+# Start playback from start (Alternative Playback)
+
+#GLOBAL
+
+```shortcut
+hold(X) + press(PLAY)
+```
+Requires "Alternative Playback Start Behaviour" enabled. With playback off.

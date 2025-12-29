@@ -69,3 +69,20 @@ hold(SHIFT) + press(GRID)
 ```shortcut
 hold(SHIFT) + turn(X)
 ```
+
+# Set clip length to sample length
+
+#AUDIO
+
+```shortcut
+press(Y) + press(X)
+```
+Also available in Audio Clip Sound Menu > ACTIONS.
+
+# Adjust audio clip length without timestretching
+
+#AUDIO
+
+```shortcut
+hold(SHIFT) + press(Y) + turn(X)
+```

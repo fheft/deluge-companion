@@ -125,3 +125,12 @@ hold(WAVE_END) + press(GRID)
 ```shortcut
 hold(WAVE_LOOP_END) + press(WAVE_END)
 ```
+
+# Waveform Loop Lock
+
+#WAVEFORM
+
+```shortcut
+hold(WAVE_LOOP_START) + press(WAVE_LOOP_END)
+```
+Locks loop points together. Repeat to unlock.

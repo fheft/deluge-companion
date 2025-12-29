@@ -408,6 +408,56 @@
     "paragraphs": []
   },
   {
+    "name": "Start playback from current scroll position (Alternative Playback)",
+    "steps": [
+      {
+        "action": 0,
+        "control": 2
+      }
+    ],
+    "views": [
+      0
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "Requires \"Alternative Playback Start Behaviour\" enabled. With playback off."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Start playback from start (Alternative Playback)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 20
+          },
+          {
+            "action": 0,
+            "control": 2
+          }
+        ]
+      }
+    ],
+    "views": [
+      0
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "Requires \"Alternative Playback Start Behaviour\" enabled. With playback off."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Make long note",
     "steps": [
       {
@@ -1356,6 +1406,56 @@
     "paragraphs": []
   },
   {
+    "name": "Clip Settings Menu (Song Grid View)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 24
+          },
+          {
+            "action": 0,
+            "control": 22
+          }
+        ]
+      }
+    ],
+    "views": [
+      1
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Clip Settings Menu (Song Row View)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 28
+          },
+          {
+            "action": 0,
+            "control": 22
+          }
+        ]
+      }
+    ],
+    "views": [
+      1
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "Uses status pad (mute/launch) in first column of sidebar."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Resample / record all audio output",
     "steps": [
       {
@@ -1816,6 +1916,60 @@
           {
             "action": 1,
             "control": 4
+          },
+          {
+            "action": 2,
+            "control": 20
+          }
+        ]
+      }
+    ],
+    "views": [
+      7
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Set clip length to sample length",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 0,
+            "control": 21
+          },
+          {
+            "action": 0,
+            "control": 20
+          }
+        ]
+      }
+    ],
+    "views": [
+      7
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "Also available in Audio Clip Sound Menu > ACTIONS."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Adjust audio clip length without timestretching",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 21
           },
           {
             "action": 2,
@@ -2348,6 +2502,195 @@
     "paragraphs": []
   },
   {
+    "name": "Randomize drum sample (selected drum)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 3
+          },
+          {
+            "action": 0,
+            "control": 38
+          }
+        ]
+      }
+    ],
+    "views": [
+      4
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Randomize drum sample (multiple selected)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 3
+          },
+          {
+            "action": 1,
+            "control": 27
+          },
+          {
+            "action": 0,
+            "control": 38
+          }
+        ]
+      }
+    ],
+    "views": [
+      4
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Randomize all active drums",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 3
+          },
+          {
+            "action": 1,
+            "control": 16
+          },
+          {
+            "action": 0,
+            "control": 38
+          }
+        ]
+      }
+    ],
+    "views": [
+      4
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Delete unused kit rows",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 12
+          },
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 6
+          }
+        ]
+      }
+    ],
+    "views": [
+      4
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Note Probability",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 37
+          }
+        ]
+      }
+    ],
+    "views": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Randomizer Lock",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 38
+          }
+        ]
+      }
+    ],
+    "views": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Velocity Probability",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 39
+          }
+        ]
+      }
+    ],
+    "views": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Manual Slicing (Lazy Chop)",
+    "steps": [
+      {
+        "action": 0,
+        "control": 20
+      }
+    ],
+    "views": [
+      4
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "While in Slice Menu."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Chromatic sample - same sample, different pitches (on new synth)",
     "steps": [
       {
@@ -2771,6 +3114,35 @@
       8
     ],
     "paragraphs": []
+  },
+  {
+    "name": "Waveform Loop Lock",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 31
+          },
+          {
+            "action": 0,
+            "control": 32
+          }
+        ]
+      }
+    ],
+    "views": [
+      8
+    ],
+    "paragraphs": [
+      {
+        "spans": [
+          {
+            "text": "Locks loop points together. Repeat to unlock."
+          }
+        ]
+      }
+    ]
   },
   {
     "name": "Add clip into arranger",
@@ -4287,6 +4659,126 @@
     ],
     "views": [
       1
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Audio Export (Start)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 0,
+            "control": 6
+          },
+          {
+            "action": 0,
+            "control": 1
+          }
+        ]
+      }
+    ],
+    "views": [
+      0,
+      1,
+      2
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Velocity View (from Instrument Clip)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 27
+          },
+          {
+            "action": 0,
+            "control": 39
+          }
+        ]
+      }
+    ],
+    "views": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Velocity View (from Automation View)",
+    "steps": [
+      {
+        "action": 0,
+        "control": 39
+      }
+    ],
+    "views": [],
+    "paragraphs": []
+  },
+  {
+    "name": "Performance View (from Song/Arranger)",
+    "steps": [
+      {
+        "action": 0,
+        "control": 17
+      }
+    ],
+    "views": [
+      1,
+      2
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Master Transpose (Chromatic)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 0,
+            "control": 21
+          },
+          {
+            "action": 2,
+            "control": 21
+          }
+        ]
+      }
+    ],
+    "views": [
+      1,
+      2
+    ],
+    "paragraphs": []
+  },
+  {
+    "name": "Master Transpose (Customize Semitones)",
+    "steps": [
+      {
+        "substeps": [
+          {
+            "action": 1,
+            "control": 4
+          },
+          {
+            "action": 0,
+            "control": 21
+          },
+          {
+            "action": 2,
+            "control": 21
+          }
+        ]
+      }
+    ],
+    "views": [
+      1,
+      2
     ],
     "paragraphs": []
   }

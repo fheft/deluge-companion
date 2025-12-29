@@ -165,3 +165,20 @@ hold(GRID) + press(SELECT)
 ```shortcut
 hold(GRID)
 ```
+
+# Clip Settings Menu (Song Grid View)
+
+#SONG
+
+```shortcut
+hold(GRID) + press(SELECT)
+```
+
+# Clip Settings Menu (Song Row View)
+
+#SONG
+
+```shortcut
+hold(LAUNCH) + press(SELECT)
+```
+Uses status pad (mute/launch) in first column of sidebar.

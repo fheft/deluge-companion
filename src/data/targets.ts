@@ -48,6 +48,9 @@ export enum Control {
   LOWER_PARAM,
   UPPER_PARAM,
   EXTERNAL,
+  NOTE_PATCH_SOURCE,
+  RANDOM_PATCH_SOURCE,
+  VELOCITY_PATCH_SOURCE,
 }
 
 export const controlDescriptions: ControlDescriptions = {
@@ -273,5 +276,20 @@ export const controlDescriptions: ControlDescriptions = {
   [Control.EXTERNAL]: {
     title: "MIDI device",
     type: ControlType.external,
+  },
+  [Control.NOTE_PATCH_SOURCE]: {
+    title: "'Note' patch source pad",
+    type: ControlType.grid,
+    classes: ["dc-grid-5-15"],
+  },
+  [Control.RANDOM_PATCH_SOURCE]: {
+    title: "'Random' patch source pad",
+    type: ControlType.grid,
+    classes: ["dc-grid-6-15"],
+  },
+  [Control.VELOCITY_PATCH_SOURCE]: {
+    title: "'Velocity' patch source pad",
+    type: ControlType.grid,
+    classes: ["dc-grid-7-15"],
   },
 };
